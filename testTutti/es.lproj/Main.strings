@@ -1,0 +1,51 @@
+
+/* Class = "UILabel"; text = "network?"; ObjectID = "0RM-Q8-WFp"; */
+"0RM-Q8-WFp.text" = "network?";
+
+/* Class = "UIButton"; normalTitle = "Ingresar"; ObjectID = "8wd-Tt-JtL"; */
+"8wd-Tt-JtL.normalTitle" = "Ingresar";
+
+/* Class = "UILabel"; text = "beacon?"; ObjectID = "91e-WS-mLO"; */
+"91e-WS-mLO.text" = "beacon?";
+
+/* Class = "UITextField"; placeholder = "Usuario"; ObjectID = "DZ3-30-Hrq"; */
+"DZ3-30-Hrq.placeholder" = "Usuario";
+
+/* Class = "UIButton"; normalTitle = "stopb"; ObjectID = "IUg-z1-7TL"; */
+"IUg-z1-7TL.normalTitle" = "stopb";
+
+/* Class = "UIButton"; normalTitle = "startb"; ObjectID = "IuK-uD-I9D"; */
+"IuK-uD-I9D.normalTitle" = "startb";
+
+/* Class = "UITextField"; placeholder = "Contraseña"; ObjectID = "PMY-1U-q3u"; */
+"PMY-1U-q3u.placeholder" = "Contraseña";
+
+/* Class = "UIButton"; normalTitle = "test con"; ObjectID = "RGT-Zc-GDG"; */
+"RGT-Zc-GDG.normalTitle" = "test con";
+
+/* Class = "UIButton"; normalTitle = "set"; ObjectID = "SZt-2P-OHD"; */
+"SZt-2P-OHD.normalTitle" = "set";
+
+/* Class = "UIButton"; normalTitle = "uGOIn"; ObjectID = "U4v-Da-4oM"; */
+"U4v-Da-4oM.normalTitle" = "uGOIn";
+
+/* Class = "UIButton"; normalTitle = "start"; ObjectID = "Vqb-FI-emB"; */
+"Vqb-FI-emB.normalTitle" = "start";
+
+/* Class = "UIButton"; normalTitle = "uGOOut"; ObjectID = "fol-bO-l4r"; */
+"fol-bO-l4r.normalTitle" = "uGOOut";
+
+/* Class = "UIButton"; normalTitle = "setb"; ObjectID = "kAh-D1-m4n"; */
+"kAh-D1-m4n.normalTitle" = "setb";
+
+/* Class = "UILabel"; text = "lon"; ObjectID = "qUy-ly-iRe"; */
+"qUy-ly-iRe.text" = "lon";
+
+/* Class = "UILabel"; text = "lat"; ObjectID = "ril-1B-c65"; */
+"ril-1B-c65.text" = "lat";
+
+/* Class = "UIButton"; normalTitle = "uGOHistory"; ObjectID = "xdW-Dt-eU4"; */
+"xdW-Dt-eU4.normalTitle" = "uGOHistory";
+
+/* Class = "UIButton"; normalTitle = "stop"; ObjectID = "zJO-EY-L36"; */
+"zJO-EY-L36.normalTitle" = "stop";
