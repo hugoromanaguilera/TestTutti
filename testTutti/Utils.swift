@@ -37,6 +37,7 @@ public class Utils {
         
         let url = NSURL(string: lsUrl)
         println(Utils.currentTimeMillis())
+        println("Url \(lsUrl)")
         let task = session.dataTaskWithURL(url!) {
             (let data, let response, let error) in
             if let httpResponse = response as? NSHTTPURLResponse {

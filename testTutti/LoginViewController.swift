@@ -11,12 +11,8 @@ import Foundation
 import UIKit
 
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
-    //for url only
-    let urlIn :String = "http://apps.solu4b.com/beepinservice/BeepInDataService.svc"
-    var dataOut:String = ""
-
     @IBOutlet var userTextField: UITextField!
     
     @IBOutlet var passwordTextField: UITextField!
@@ -33,8 +29,10 @@ class LoginViewController: UIViewController {
             //validate svc and if ok insert or update account
             mySession.settings.user = usr
             mySession.settings.password = pwd
-            var localUrl :String = urlIn
-            self.dataOut = Utils.connectToSvc(localUrl, lsUserAndPassword: (usr + ":" + pwd), completed: &ret)
+            println(Utils.currentTimeMillis())
+            var ret:ConnectionResult = .NoCredentials
+            println(Utils.currentTimeMillis())
+            mySession.uGOLogin(&ret)
             if (ret == .Success){
             }
         }
@@ -42,20 +40,36 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if (mySession.settings.user != "" && mySession.settings.password != "") {
-            var localUrl :String = urlIn
-            var ret : ConnectionResult = .NoCredentials
-            self.dataOut = Utils.connectToSvc(localUrl, lsUserAndPassword: (mySession.settings.user! + ":" + mySession.settings.password!), completed: &ret)
-            if (ret == .Success){
-                self.performSegueWithIdentifier("loginSegue", sender: self)
+        userTextField.delegate = self
+        passwordTextField.delegate = self
+        
+        if let usr = mySession.settings.user {
+            if let pwd = mySession.settings.password {
+                if (usr != "" && pwd != "" ){
+                    println(Utils.currentTimeMillis())
+                    var ret:ConnectionResult = .NoCredentials
+                    println(Utils.currentTimeMillis())
+                    mySession.uGOLogin(&ret)
+                    if (ret == .Success){
+                        self.performSegueWithIdentifier("loginSegue", sender: self)
+                    }
+                }
             }
         }
     }
+    
     override func viewDidAppear(animated: Bool) {
         //
     }
+    
     override func viewDidDisappear(animated: Bool) {
         //
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool
+    {
+        textField.resignFirstResponder()
+        return true;
     }
     
     

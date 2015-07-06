@@ -73,6 +73,11 @@ class PersistedSettings{
             defaults.synchronize()
         }
     }
+    var userAndPassword : String?{
+        get{
+            return (user! + ":" + password!)
+        }
+    }
     
     var lastOnline : NSDate?{
         get{

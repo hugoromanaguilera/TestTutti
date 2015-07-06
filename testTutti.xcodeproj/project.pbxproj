@@ -19,6 +19,7 @@
 		016A88341B40BDC6005CA489 /* testTuttiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A88331B40BDC6005CA489 /* testTuttiTests.swift */; };
 		016A883E1B40C07F005CA489 /* UrlFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A883D1B40C07F005CA489 /* UrlFile.swift */; };
 		016A88401B416D07005CA489 /* ReachingOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A883F1B416D07005CA489 /* ReachingOut.swift */; };
+		01CC916A1B4AD55700FC5B7A /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CC91691B4AD55700FC5B7A /* Beacon.swift */; };
 		01CEDB741B47253A00775DDD /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CEDB731B47253A00775DDD /* Account.swift */; };
 		01CEDB781B47261B00775DDD /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CEDB771B47261B00775DDD /* Keychain.swift */; };
 		01CEDB951B47296800775DDD /* cerrar2.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CEDB7B1B47296800775DDD /* cerrar2.png */; };
@@ -81,6 +82,7 @@
 		016A88331B40BDC6005CA489 /* testTuttiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testTuttiTests.swift; sourceTree = "<group>"; };
 		016A883D1B40C07F005CA489 /* UrlFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlFile.swift; sourceTree = "<group>"; };
 		016A883F1B416D07005CA489 /* ReachingOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachingOut.swift; sourceTree = "<group>"; };
+		01CC91691B4AD55700FC5B7A /* Beacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
 		01CEDB731B47253A00775DDD /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		01CEDB771B47261B00775DDD /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		01CEDB7B1B47296800775DDD /* cerrar2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cerrar2.png; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				016A883D1B40C07F005CA489 /* UrlFile.swift */,
 				016A883F1B416D07005CA489 /* ReachingOut.swift */,
 				01CF1C4E1B481444002DC09E /* Session.swift */,
+				01CC91691B4AD55700FC5B7A /* Beacon.swift */,
 				01CF1C801B49E0CD002DC09E /* Location.swift */,
 				01CF1C501B4816C4002DC09E /* PersistedSettings.swift */,
 				016A88211B40BDC6005CA489 /* Main.storyboard */,
@@ -394,6 +397,7 @@
 				016A881E1B40BDC6005CA489 /* testTutti.xcdatamodeld in Sources */,
 				016A88401B416D07005CA489 /* ReachingOut.swift in Sources */,
 				016A881B1B40BDC6005CA489 /* AppDelegate.swift in Sources */,
+				01CC916A1B4AD55700FC5B7A /* Beacon.swift in Sources */,
 				01CF1C511B4816C4002DC09E /* PersistedSettings.swift in Sources */,
 				016A883E1B40C07F005CA489 /* UrlFile.swift in Sources */,
 				01CEDB781B47261B00775DDD /* Keychain.swift in Sources */,

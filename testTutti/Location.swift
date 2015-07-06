@@ -19,7 +19,15 @@ class Location: NSObject, CLLocationManagerDelegate {
     
     override init() {
         super.init()
+        localMgr  = CLLocationManager()
+        localMgr.delegate = self
+        localMgr.desiredAccuracy = kCLLocationAccuracyBest
+        localMgr.requestAlwaysAuthorization()
         self.startLocationManager()
+    }
+
+    func ping()->Void{
+        
     }
     
     func startLocationManager()->Void{
