@@ -8,51 +8,85 @@
 
 /* Begin PBXBuildFile section */
 		010771601B416EFD00D70D85 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0107715F1B416EFD00D70D85 /* Utils.swift */; };
-		010771621B41712E00D70D85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010771611B41712E00D70D85 /* ViewController.swift */; };
-		010771641B41881100D70D85 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 010771631B41881100D70D85 /* CoreLocation.framework */; };
-		010771661B41881B00D70D85 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 010771651B41881B00D70D85 /* CoreBluetooth.framework */; };
+		01139EE01C6FD800002D50CA /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01139EDD1C6FD800002D50CA /* CoreDataManager.swift */; };
+		01139EE21C6FD800002D50CA /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01139EDE1C6FD800002D50CA /* Person.swift */; };
+		01139EE41C6FD800002D50CA /* Mark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01139EDF1C6FD800002D50CA /* Mark.swift */; };
+		01139EE81C6FD88B002D50CA /* uGoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01139EE71C6FD88B002D50CA /* uGoClient.swift */; };
+		01139EEB1C6FD8DA002D50CA /* CommonHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01139EEA1C6FD8DA002D50CA /* CommonHelpers.swift */; };
+		01139EEE1C6FD930002D50CA /* uGoConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01139EED1C6FD930002D50CA /* uGoConstant.swift */; };
+		01139EF51C70916E002D50CA /* uGoConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01139EF41C70916E002D50CA /* uGoConvenience.swift */; };
+		013797AF1C43C67300B36181 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0107715F1B416EFD00D70D85 /* Utils.swift */; };
+		013E77C61C81D2B100C74DC9 /* tapticsCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013E77C51C81D2B100C74DC9 /* tapticsCall.swift */; };
+		015829821BDCFF2500C31512 /* HistoryCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015829811BDCFF2500C31512 /* HistoryCellViewController.swift */; };
+		015829841BDD80F300C31512 /* DetailRecordHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015829831BDD80F300C31512 /* DetailRecordHistoryViewController.swift */; };
+		015E19C51C314ACD00749C09 /* 38mm_48_NotifCenter.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E19B91C314ACC00749C09 /* 38mm_48_NotifCenter.png */; };
+		015E19C61C314ACD00749C09 /* 38mm_80_HomeScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E19BA1C314ACC00749C09 /* 38mm_80_HomeScreen.png */; };
+		015E19C71C314ACD00749C09 /* 38mm_80_LongLookNotif.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E19BB1C314ACC00749C09 /* 38mm_80_LongLookNotif.png */; };
+		015E19C81C314ACD00749C09 /* 38mm_172_ShortLook.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E19BC1C314ACD00749C09 /* 38mm_172_ShortLook.png */; };
+		015E19C91C314ACD00749C09 /* 38mm_In.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E19BD1C314ACD00749C09 /* 38mm_In.png */; };
+		015E19CA1C314ACD00749C09 /* 38mm_Out.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E19BE1C314ACD00749C09 /* 38mm_Out.png */; };
+		015E19CB1C314ACD00749C09 /* 42mm_55_NotifCenter.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E19BF1C314ACD00749C09 /* 42mm_55_NotifCenter.png */; };
+		015E19CC1C314ACD00749C09 /* 42mm_80_HomeScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E19C01C314ACD00749C09 /* 42mm_80_HomeScreen.png */; };
+		015E19CD1C314ACD00749C09 /* 42mm_88_LongLookNotif.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E19C11C314ACD00749C09 /* 42mm_88_LongLookNotif.png */; };
+		015E19CE1C314ACD00749C09 /* 42mm_196_ShortLook.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E19C21C314ACD00749C09 /* 42mm_196_ShortLook.png */; };
+		015E19CF1C314ACD00749C09 /* 42mm_In.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E19C31C314ACD00749C09 /* 42mm_In.png */; };
+		015E19D01C314ACD00749C09 /* 42mm_Out.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E19C41C314ACD00749C09 /* 42mm_Out.png */; };
+		015E19D21C31511500749C09 /* registerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015E19D11C31511500749C09 /* registerController.swift */; };
 		016A881B1B40BDC6005CA489 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A881A1B40BDC6005CA489 /* AppDelegate.swift */; };
 		016A881E1B40BDC6005CA489 /* testTutti.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 016A881C1B40BDC6005CA489 /* testTutti.xcdatamodeld */; };
-		016A88231B40BDC6005CA489 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 016A88211B40BDC6005CA489 /* Main.storyboard */; };
 		016A88251B40BDC6005CA489 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 016A88241B40BDC6005CA489 /* Images.xcassets */; };
 		016A88281B40BDC6005CA489 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 016A88261B40BDC6005CA489 /* LaunchScreen.xib */; };
 		016A88341B40BDC6005CA489 /* testTuttiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A88331B40BDC6005CA489 /* testTuttiTests.swift */; };
-		016A883E1B40C07F005CA489 /* UrlFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A883D1B40C07F005CA489 /* UrlFile.swift */; };
-		016A88401B416D07005CA489 /* ReachingOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A883F1B416D07005CA489 /* ReachingOut.swift */; };
+		0187057A1BAF5C4400BDEC98 /* inOutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018705791BAF5C4400BDEC98 /* inOutTableViewCell.swift */; };
+		018D3AA21BE0E10B004AF76C /* android.png in Resources */ = {isa = PBXBuildFile; fileRef = 018D3A861BE0E10B004AF76C /* android.png */; };
+		018D3AA31BE0E10B004AF76C /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 018D3A871BE0E10B004AF76C /* apple.png */; };
+		018D3AA41BE0E10B004AF76C /* beacon.png in Resources */ = {isa = PBXBuildFile; fileRef = 018D3A881BE0E10B004AF76C /* beacon.png */; };
+		018D3AA71BE0E10B004AF76C /* bubbles2.png in Resources */ = {isa = PBXBuildFile; fileRef = 018D3A8B1BE0E10B004AF76C /* bubbles2.png */; };
+		018D3AA81BE0E10B004AF76C /* cerrar2.png in Resources */ = {isa = PBXBuildFile; fileRef = 018D3A8C1BE0E10B004AF76C /* cerrar2.png */; };
+		018D3AA91BE0E10B004AF76C /* contrasena.png in Resources */ = {isa = PBXBuildFile; fileRef = 018D3A8D1BE0E10B004AF76C /* contrasena.png */; };
+		018D3AAA1BE0E10B004AF76C /* engage.png in Resources */ = {isa = PBXBuildFile; fileRef = 018D3A8E1BE0E10B004AF76C /* engage.png */; };
+		018D3AAB1BE0E10B004AF76C /* entrada.png in Resources */ = {isa = PBXBuildFile; fileRef = 018D3A8F1BE0E10B004AF76C /* entrada.png */; };
+		018D3AAD1BE0E10B004AF76C /* gps.png in Resources */ = {isa = PBXBuildFile; fileRef = 018D3A911BE0E10B004AF76C /* gps.png */; };
+		018D3AAE1BE0E10B004AF76C /* historial.png in Resources */ = {isa = PBXBuildFile; fileRef = 018D3A921BE0E10B004AF76C /* historial.png */; };
+		018D3AAF1BE0E10B004AF76C /* iPhone_In.png in Resources */ = {isa = PBXBuildFile; fileRef = 018D3A931BE0E10B004AF76C /* iPhone_In.png */; };
+		018D3AB01BE0E10B004AF76C /* Iphone_Out.png in Resources */ = {isa = PBXBuildFile; fileRef = 018D3A941BE0E10B004AF76C /* Iphone_Out.png */; };
+		018D3AB11BE0E10B004AF76C /* llave.png in Resources */ = {isa = PBXBuildFile; fileRef = 018D3A951BE0E10B004AF76C /* llave.png */; };
+		018D3AB21BE0E10B004AF76C /* mapa.png in Resources */ = {isa = PBXBuildFile; fileRef = 018D3A961BE0E10B004AF76C /* mapa.png */; };
+		018D3AB31BE0E10B004AF76C /* mapaalpha.png in Resources */ = {isa = PBXBuildFile; fileRef = 018D3A971BE0E10B004AF76C /* mapaalpha.png */; };
+		018D3AB41BE0E10B004AF76C /* pass.png in Resources */ = {isa = PBXBuildFile; fileRef = 018D3A981BE0E10B004AF76C /* pass.png */; };
+		018D3AB51BE0E10B004AF76C /* registro.png in Resources */ = {isa = PBXBuildFile; fileRef = 018D3A991BE0E10B004AF76C /* registro.png */; };
+		018D3AB61BE0E10B004AF76C /* salida.png in Resources */ = {isa = PBXBuildFile; fileRef = 018D3A9A1BE0E10B004AF76C /* salida.png */; };
+		018D3AB71BE0E10B004AF76C /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 018D3A9B1BE0E10B004AF76C /* settings.png */; };
+		018D3AB81BE0E10B004AF76C /* solulabs.png in Resources */ = {isa = PBXBuildFile; fileRef = 018D3A9C1BE0E10B004AF76C /* solulabs.png */; };
+		018D3AB91BE0E10B004AF76C /* tablet.png in Resources */ = {isa = PBXBuildFile; fileRef = 018D3A9D1BE0E10B004AF76C /* tablet.png */; };
+		018D3ABA1BE0E10B004AF76C /* ugologo3.png in Resources */ = {isa = PBXBuildFile; fileRef = 018D3A9E1BE0E10B004AF76C /* ugologo3.png */; };
+		018D3ABB1BE0E10B004AF76C /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 018D3A9F1BE0E10B004AF76C /* user.png */; };
+		018D3ABC1BE0E10B004AF76C /* usuario.png in Resources */ = {isa = PBXBuildFile; fileRef = 018D3AA01BE0E10B004AF76C /* usuario.png */; };
+		018D3ABD1BE0E10B004AF76C /* wifi.png in Resources */ = {isa = PBXBuildFile; fileRef = 018D3AA11BE0E10B004AF76C /* wifi.png */; };
+		018D3AFA1BE14C89004AF76C /* AppIcon_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 018D3AF81BE14C89004AF76C /* AppIcon_2x.png */; };
+		018D3AFB1BE14C89004AF76C /* AppIcon_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 018D3AF91BE14C89004AF76C /* AppIcon_3x.png */; };
+		01912E221BDAD5F900588B95 /* RecordCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01912E211BDAD5F900588B95 /* RecordCard.swift */; };
+		0198D03D1BAB8B9700835E51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0198D03C1BAB8B9700835E51 /* Main.storyboard */; };
 		01CC916A1B4AD55700FC5B7A /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CC91691B4AD55700FC5B7A /* Beacon.swift */; };
 		01CEDB741B47253A00775DDD /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CEDB731B47253A00775DDD /* Account.swift */; };
 		01CEDB781B47261B00775DDD /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CEDB771B47261B00775DDD /* Keychain.swift */; };
-		01CEDB951B47296800775DDD /* cerrar2.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CEDB7B1B47296800775DDD /* cerrar2.png */; };
-		01CEDB961B47296800775DDD /* mapaalpha.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CEDB7C1B47296800775DDD /* mapaalpha.png */; };
-		01CEDB971B47296800775DDD /* salida.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CEDB7D1B47296800775DDD /* salida.png */; };
-		01CEDB981B47296800775DDD /* mapa.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CEDB7E1B47296800775DDD /* mapa.png */; };
-		01CEDB991B47296800775DDD /* entrada.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CEDB7F1B47296800775DDD /* entrada.png */; };
-		01CEDB9A1B47296800775DDD /* engage.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CEDB801B47296800775DDD /* engage.png */; };
-		01CEDB9B1B47296800775DDD /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CEDB811B47296800775DDD /* apple.png */; };
-		01CEDB9C1B47296800775DDD /* android.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CEDB821B47296800775DDD /* android.png */; };
-		01CEDB9D1B47296800775DDD /* beacon.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CEDB831B47296800775DDD /* beacon.png */; };
-		01CEDB9E1B47296800775DDD /* btnMarcarIngreso.fw.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CEDB841B47296800775DDD /* btnMarcarIngreso.fw.png */; };
-		01CEDB9F1B47296800775DDD /* btnMarcarSalida.fw.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CEDB851B47296800775DDD /* btnMarcarSalida.fw.png */; };
-		01CEDBA01B47296800775DDD /* bubbles2.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CEDB861B47296800775DDD /* bubbles2.png */; };
-		01CEDBA11B47296800775DDD /* contrasena.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CEDB871B47296800775DDD /* contrasena.png */; };
-		01CEDBA21B47296800775DDD /* fondoEntrada.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CEDB881B47296800775DDD /* fondoEntrada.png */; };
-		01CEDBA31B47296800775DDD /* gps.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CEDB891B47296800775DDD /* gps.png */; };
-		01CEDBA41B47296800775DDD /* historial.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CEDB8A1B47296800775DDD /* historial.png */; };
-		01CEDBA51B47296800775DDD /* llave.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CEDB8B1B47296800775DDD /* llave.png */; };
-		01CEDBA61B47296800775DDD /* pass.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CEDB8C1B47296800775DDD /* pass.png */; };
-		01CEDBA71B47296800775DDD /* registro.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CEDB8D1B47296800775DDD /* registro.png */; };
-		01CEDBA81B47296800775DDD /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CEDB8E1B47296800775DDD /* settings.png */; };
-		01CEDBA91B47296800775DDD /* tablet.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CEDB8F1B47296800775DDD /* tablet.png */; };
-		01CEDBAA1B47296800775DDD /* solulabs.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CEDB901B47296800775DDD /* solulabs.png */; };
-		01CEDBAB1B47296800775DDD /* ugologo3.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CEDB911B47296800775DDD /* ugologo3.png */; };
-		01CEDBAC1B47296800775DDD /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CEDB921B47296800775DDD /* user.png */; };
-		01CEDBAD1B47296800775DDD /* usuario.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CEDB931B47296800775DDD /* usuario.png */; };
-		01CEDBAE1B47296800775DDD /* wifi.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CEDB941B47296800775DDD /* wifi.png */; };
 		01CEDBB01B47299D00775DDD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CEDBAF1B47299D00775DDD /* LoginViewController.swift */; };
+		01CF04FB1B4D342C002FBD9D /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CF04FA1B4D342C002FBD9D /* RecordViewController.swift */; };
+		01CF04FD1B4D34AB002FBD9D /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CF04FC1B4D34AB002FBD9D /* HistoryViewController.swift */; };
+		01CF04FF1B4D34C2002FBD9D /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CF04FE1B4D34C2002FBD9D /* ConfigurationViewController.swift */; };
 		01CF1C471B47D90C002DC09E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01CF1C491B47D90C002DC09E /* Localizable.strings */; };
-		01CF1C4F1B481444002DC09E /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CF1C4E1B481444002DC09E /* Session.swift */; };
 		01CF1C511B4816C4002DC09E /* PersistedSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CF1C501B4816C4002DC09E /* PersistedSettings.swift */; };
 		01CF1C811B49E0CD002DC09E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CF1C801B49E0CD002DC09E /* Location.swift */; };
+		01ED56971C309402002D7472 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01ED56951C309402002D7472 /* Interface.storyboard */; };
+		01ED56991C309402002D7472 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01ED56981C309402002D7472 /* Assets.xcassets */; };
+		01ED56A01C309403002D7472 /* testTutti.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 01ED569F1C309403002D7472 /* testTutti.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		01ED56A71C309403002D7472 /* mainInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ED56A61C309403002D7472 /* mainInterfaceController.swift */; };
+		01ED56A91C309403002D7472 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ED56A81C309403002D7472 /* ExtensionDelegate.swift */; };
+		01ED56AB1C309403002D7472 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ED56AA1C309403002D7472 /* NotificationController.swift */; };
+		01ED56AD1C309403002D7472 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01ED56AC1C309403002D7472 /* Assets.xcassets */; };
+		01ED56B11C309403002D7472 /* testTutti.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 01ED56931C309402002D7472 /* testTutti.app */; };
+		01ED56BB1C3094C8002D7472 /* registro.png in Resources */ = {isa = PBXBuildFile; fileRef = 01ED56BA1C3094C8002D7472 /* registro.png */; };
+		01ED56BD1C3094E4002D7472 /* historial.png in Resources */ = {isa = PBXBuildFile; fileRef = 01ED56BC1C3094E4002D7472 /* historial.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,66 +97,138 @@
 			remoteGlobalIDString = 016A88141B40BDC6005CA489;
 			remoteInfo = testTutti;
 		};
+		01ED56A11C309403002D7472 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 016A880D1B40BDC6005CA489 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01ED569E1C309403002D7472;
+			remoteInfo = "testTuttiWatch Extension";
+		};
+		01ED56AF1C309403002D7472 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 016A880D1B40BDC6005CA489 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01ED56921C309402002D7472;
+			remoteInfo = testTuttiWatch;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		01ED56B71C309403002D7472 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				01ED56A01C309403002D7472 /* testTutti.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01ED56B91C309403002D7472 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				01ED56B11C309403002D7472 /* testTutti.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0107715F1B416EFD00D70D85 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		010771611B41712E00D70D85 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
-		010771631B41881100D70D85 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		010771651B41881B00D70D85 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		01139EDD1C6FD800002D50CA /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		01139EDE1C6FD800002D50CA /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		01139EDF1C6FD800002D50CA /* Mark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mark.swift; sourceTree = "<group>"; };
+		01139EE71C6FD88B002D50CA /* uGoClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = uGoClient.swift; sourceTree = "<group>"; };
+		01139EEA1C6FD8DA002D50CA /* CommonHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonHelpers.swift; sourceTree = "<group>"; };
+		01139EED1C6FD930002D50CA /* uGoConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = uGoConstant.swift; sourceTree = "<group>"; };
+		01139EF41C70916E002D50CA /* uGoConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = uGoConvenience.swift; path = ../uGoConvenience.swift; sourceTree = "<group>"; };
+		013E77C51C81D2B100C74DC9 /* tapticsCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tapticsCall.swift; sourceTree = "<group>"; };
+		015829811BDCFF2500C31512 /* HistoryCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryCellViewController.swift; sourceTree = "<group>"; };
+		015829831BDD80F300C31512 /* DetailRecordHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailRecordHistoryViewController.swift; sourceTree = "<group>"; };
+		015E19B91C314ACC00749C09 /* 38mm_48_NotifCenter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 38mm_48_NotifCenter.png; path = ../testTutti/38mm_48_NotifCenter.png; sourceTree = "<group>"; };
+		015E19BA1C314ACC00749C09 /* 38mm_80_HomeScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 38mm_80_HomeScreen.png; path = ../testTutti/38mm_80_HomeScreen.png; sourceTree = "<group>"; };
+		015E19BB1C314ACC00749C09 /* 38mm_80_LongLookNotif.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 38mm_80_LongLookNotif.png; path = ../testTutti/38mm_80_LongLookNotif.png; sourceTree = "<group>"; };
+		015E19BC1C314ACD00749C09 /* 38mm_172_ShortLook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 38mm_172_ShortLook.png; path = ../testTutti/38mm_172_ShortLook.png; sourceTree = "<group>"; };
+		015E19BD1C314ACD00749C09 /* 38mm_In.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 38mm_In.png; path = ../testTutti/38mm_In.png; sourceTree = "<group>"; };
+		015E19BE1C314ACD00749C09 /* 38mm_Out.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 38mm_Out.png; path = ../testTutti/38mm_Out.png; sourceTree = "<group>"; };
+		015E19BF1C314ACD00749C09 /* 42mm_55_NotifCenter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 42mm_55_NotifCenter.png; path = ../testTutti/42mm_55_NotifCenter.png; sourceTree = "<group>"; };
+		015E19C01C314ACD00749C09 /* 42mm_80_HomeScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 42mm_80_HomeScreen.png; path = ../testTutti/42mm_80_HomeScreen.png; sourceTree = "<group>"; };
+		015E19C11C314ACD00749C09 /* 42mm_88_LongLookNotif.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 42mm_88_LongLookNotif.png; path = ../testTutti/42mm_88_LongLookNotif.png; sourceTree = "<group>"; };
+		015E19C21C314ACD00749C09 /* 42mm_196_ShortLook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 42mm_196_ShortLook.png; path = ../testTutti/42mm_196_ShortLook.png; sourceTree = "<group>"; };
+		015E19C31C314ACD00749C09 /* 42mm_In.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 42mm_In.png; path = ../testTutti/42mm_In.png; sourceTree = "<group>"; };
+		015E19C41C314ACD00749C09 /* 42mm_Out.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 42mm_Out.png; path = ../testTutti/42mm_Out.png; sourceTree = "<group>"; };
+		015E19D11C31511500749C09 /* registerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = registerController.swift; sourceTree = "<group>"; };
 		016A88151B40BDC6005CA489 /* testTutti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testTutti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		016A88191B40BDC6005CA489 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		016A881A1B40BDC6005CA489 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		016A881D1B40BDC6005CA489 /* testTutti.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = testTutti.xcdatamodel; sourceTree = "<group>"; };
-		016A88221B40BDC6005CA489 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		016A88241B40BDC6005CA489 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		016A88271B40BDC6005CA489 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		016A882D1B40BDC6005CA489 /* testTuttiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testTuttiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		016A882D1B40BDC6005CA489 /* testTutti.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testTutti.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		016A88321B40BDC6005CA489 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		016A88331B40BDC6005CA489 /* testTuttiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testTuttiTests.swift; sourceTree = "<group>"; };
-		016A883D1B40C07F005CA489 /* UrlFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlFile.swift; sourceTree = "<group>"; };
-		016A883F1B416D07005CA489 /* ReachingOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachingOut.swift; sourceTree = "<group>"; };
+		018705791BAF5C4400BDEC98 /* inOutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = inOutTableViewCell.swift; path = ../inOutTableViewCell.swift; sourceTree = "<group>"; };
+		018D3A861BE0E10B004AF76C /* android.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = android.png; sourceTree = "<group>"; };
+		018D3A871BE0E10B004AF76C /* apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apple.png; sourceTree = "<group>"; };
+		018D3A881BE0E10B004AF76C /* beacon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beacon.png; sourceTree = "<group>"; };
+		018D3A8B1BE0E10B004AF76C /* bubbles2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbles2.png; sourceTree = "<group>"; };
+		018D3A8C1BE0E10B004AF76C /* cerrar2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cerrar2.png; sourceTree = "<group>"; };
+		018D3A8D1BE0E10B004AF76C /* contrasena.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contrasena.png; sourceTree = "<group>"; };
+		018D3A8E1BE0E10B004AF76C /* engage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = engage.png; sourceTree = "<group>"; };
+		018D3A8F1BE0E10B004AF76C /* entrada.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = entrada.png; sourceTree = "<group>"; };
+		018D3A911BE0E10B004AF76C /* gps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gps.png; sourceTree = "<group>"; };
+		018D3A921BE0E10B004AF76C /* historial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = historial.png; sourceTree = "<group>"; };
+		018D3A931BE0E10B004AF76C /* iPhone_In.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone_In.png; sourceTree = "<group>"; };
+		018D3A941BE0E10B004AF76C /* Iphone_Out.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Iphone_Out.png; sourceTree = "<group>"; };
+		018D3A951BE0E10B004AF76C /* llave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = llave.png; sourceTree = "<group>"; };
+		018D3A961BE0E10B004AF76C /* mapa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapa.png; sourceTree = "<group>"; };
+		018D3A971BE0E10B004AF76C /* mapaalpha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapaalpha.png; sourceTree = "<group>"; };
+		018D3A981BE0E10B004AF76C /* pass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pass.png; sourceTree = "<group>"; };
+		018D3A991BE0E10B004AF76C /* registro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = registro.png; sourceTree = "<group>"; };
+		018D3A9A1BE0E10B004AF76C /* salida.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = salida.png; sourceTree = "<group>"; };
+		018D3A9B1BE0E10B004AF76C /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		018D3A9C1BE0E10B004AF76C /* solulabs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = solulabs.png; sourceTree = "<group>"; };
+		018D3A9D1BE0E10B004AF76C /* tablet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tablet.png; sourceTree = "<group>"; };
+		018D3A9E1BE0E10B004AF76C /* ugologo3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ugologo3.png; sourceTree = "<group>"; };
+		018D3A9F1BE0E10B004AF76C /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		018D3AA01BE0E10B004AF76C /* usuario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = usuario.png; sourceTree = "<group>"; };
+		018D3AA11BE0E10B004AF76C /* wifi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wifi.png; sourceTree = "<group>"; };
+		018D3AF81BE14C89004AF76C /* AppIcon_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon_2x.png; sourceTree = "<group>"; };
+		018D3AF91BE14C89004AF76C /* AppIcon_3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon_3x.png; sourceTree = "<group>"; };
+		01912E211BDAD5F900588B95 /* RecordCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordCard.swift; sourceTree = "<group>"; };
+		0198D03C1BAB8B9700835E51 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		01CC91691B4AD55700FC5B7A /* Beacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
 		01CEDB731B47253A00775DDD /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		01CEDB771B47261B00775DDD /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
-		01CEDB7B1B47296800775DDD /* cerrar2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cerrar2.png; sourceTree = "<group>"; };
-		01CEDB7C1B47296800775DDD /* mapaalpha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapaalpha.png; sourceTree = "<group>"; };
-		01CEDB7D1B47296800775DDD /* salida.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = salida.png; sourceTree = "<group>"; };
-		01CEDB7E1B47296800775DDD /* mapa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapa.png; sourceTree = "<group>"; };
-		01CEDB7F1B47296800775DDD /* entrada.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = entrada.png; sourceTree = "<group>"; };
-		01CEDB801B47296800775DDD /* engage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = engage.png; sourceTree = "<group>"; };
-		01CEDB811B47296800775DDD /* apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apple.png; sourceTree = "<group>"; };
-		01CEDB821B47296800775DDD /* android.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = android.png; sourceTree = "<group>"; };
-		01CEDB831B47296800775DDD /* beacon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beacon.png; sourceTree = "<group>"; };
-		01CEDB841B47296800775DDD /* btnMarcarIngreso.fw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnMarcarIngreso.fw.png; sourceTree = "<group>"; };
-		01CEDB851B47296800775DDD /* btnMarcarSalida.fw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnMarcarSalida.fw.png; sourceTree = "<group>"; };
-		01CEDB861B47296800775DDD /* bubbles2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbles2.png; sourceTree = "<group>"; };
-		01CEDB871B47296800775DDD /* contrasena.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contrasena.png; sourceTree = "<group>"; };
-		01CEDB881B47296800775DDD /* fondoEntrada.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fondoEntrada.png; sourceTree = "<group>"; };
-		01CEDB891B47296800775DDD /* gps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gps.png; sourceTree = "<group>"; };
-		01CEDB8A1B47296800775DDD /* historial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = historial.png; sourceTree = "<group>"; };
-		01CEDB8B1B47296800775DDD /* llave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = llave.png; sourceTree = "<group>"; };
-		01CEDB8C1B47296800775DDD /* pass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pass.png; sourceTree = "<group>"; };
-		01CEDB8D1B47296800775DDD /* registro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = registro.png; sourceTree = "<group>"; };
-		01CEDB8E1B47296800775DDD /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
-		01CEDB8F1B47296800775DDD /* tablet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tablet.png; sourceTree = "<group>"; };
-		01CEDB901B47296800775DDD /* solulabs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = solulabs.png; sourceTree = "<group>"; };
-		01CEDB911B47296800775DDD /* ugologo3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ugologo3.png; sourceTree = "<group>"; };
-		01CEDB921B47296800775DDD /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
-		01CEDB931B47296800775DDD /* usuario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = usuario.png; sourceTree = "<group>"; };
-		01CEDB941B47296800775DDD /* wifi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wifi.png; sourceTree = "<group>"; };
 		01CEDBAF1B47299D00775DDD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		01CF1C411B47D60A002DC09E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		01CF04FA1B4D342C002FBD9D /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
+		01CF04FC1B4D34AB002FBD9D /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		01CF04FE1B4D34C2002FBD9D /* ConfigurationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
 		01CF1C421B47D60A002DC09E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		01CF1C431B47D615002DC09E /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Main.strings; sourceTree = "<group>"; };
 		01CF1C441B47D616002DC09E /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		01CF1C481B47D90C002DC09E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		01CF1C4A1B47D91A002DC09E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		01CF1C4B1B47D91A002DC09E /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
-		01CF1C4D1B47D9E9002DC09E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		01CF1C4E1B481444002DC09E /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		01CF1C501B4816C4002DC09E /* PersistedSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistedSettings.swift; sourceTree = "<group>"; };
 		01CF1C801B49E0CD002DC09E /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		01ED56931C309402002D7472 /* testTutti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testTutti.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01ED56961C309402002D7472 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		01ED56981C309402002D7472 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		01ED569A1C309402002D7472 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01ED569F1C309403002D7472 /* testTutti.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = testTutti.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		01ED56A51C309403002D7472 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		01ED56A61C309403002D7472 /* mainInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainInterfaceController.swift; sourceTree = "<group>"; };
+		01ED56A81C309403002D7472 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		01ED56AA1C309403002D7472 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		01ED56AC1C309403002D7472 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		01ED56AE1C309403002D7472 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01ED56BA1C3094C8002D7472 /* registro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = registro.png; sourceTree = "<group>"; };
+		01ED56BC1C3094E4002D7472 /* historial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = historial.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,8 +236,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				010771661B41881B00D70D85 /* CoreBluetooth.framework in Frameworks */,
-				010771641B41881100D70D85 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,16 +246,63 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		01ED569C1C309403002D7472 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01139EE61C6FD820002D50CA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				01139EDD1C6FD800002D50CA /* CoreDataManager.swift */,
+				01139EDE1C6FD800002D50CA /* Person.swift */,
+				01139EDF1C6FD800002D50CA /* Mark.swift */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		014860571C787F970030FBE3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				015E19D11C31511500749C09 /* registerController.swift */,
+				013E77C51C81D2B100C74DC9 /* tapticsCall.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		014860581C787FDB0030FBE3 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				015E19B91C314ACC00749C09 /* 38mm_48_NotifCenter.png */,
+				015E19BA1C314ACC00749C09 /* 38mm_80_HomeScreen.png */,
+				015E19BB1C314ACC00749C09 /* 38mm_80_LongLookNotif.png */,
+				015E19BC1C314ACD00749C09 /* 38mm_172_ShortLook.png */,
+				015E19BF1C314ACD00749C09 /* 42mm_55_NotifCenter.png */,
+				015E19C01C314ACD00749C09 /* 42mm_80_HomeScreen.png */,
+				015E19C31C314ACD00749C09 /* 42mm_In.png */,
+				015E19C41C314ACD00749C09 /* 42mm_Out.png */,
+				015E19BD1C314ACD00749C09 /* 38mm_In.png */,
+				015E19BE1C314ACD00749C09 /* 38mm_Out.png */,
+				015E19C11C314ACD00749C09 /* 42mm_88_LongLookNotif.png */,
+				015E19C21C314ACD00749C09 /* 42mm_196_ShortLook.png */,
+				01ED56BA1C3094C8002D7472 /* registro.png */,
+				01ED56BC1C3094E4002D7472 /* historial.png */,
+			);
+			name = icons;
+			sourceTree = "<group>";
+		};
 		016A880C1B40BDC6005CA489 = {
 			isa = PBXGroup;
 			children = (
-				010771651B41881B00D70D85 /* CoreBluetooth.framework */,
-				010771631B41881100D70D85 /* CoreLocation.framework */,
 				016A88171B40BDC6005CA489 /* testTutti */,
 				016A88301B40BDC6005CA489 /* testTuttiTests */,
+				01ED56941C309402002D7472 /* testTuttiWatch */,
+				01ED56A31C309403002D7472 /* testTuttiWatch Extension */,
 				016A88161B40BDC6005CA489 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -160,7 +311,9 @@
 			isa = PBXGroup;
 			children = (
 				016A88151B40BDC6005CA489 /* testTutti.app */,
-				016A882D1B40BDC6005CA489 /* testTuttiTests.xctest */,
+				016A882D1B40BDC6005CA489 /* testTutti.xctest */,
+				01ED56931C309402002D7472 /* testTutti.app */,
+				01ED569F1C309403002D7472 /* testTutti.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,21 +321,9 @@
 		016A88171B40BDC6005CA489 /* testTutti */ = {
 			isa = PBXGroup;
 			children = (
-				016A881A1B40BDC6005CA489 /* AppDelegate.swift */,
-				01CEDBAF1B47299D00775DDD /* LoginViewController.swift */,
-				010771611B41712E00D70D85 /* ViewController.swift */,
-				0107715F1B416EFD00D70D85 /* Utils.swift */,
-				016A883D1B40C07F005CA489 /* UrlFile.swift */,
-				016A883F1B416D07005CA489 /* ReachingOut.swift */,
-				01CF1C4E1B481444002DC09E /* Session.swift */,
-				01CC91691B4AD55700FC5B7A /* Beacon.swift */,
-				01CF1C801B49E0CD002DC09E /* Location.swift */,
-				01CF1C501B4816C4002DC09E /* PersistedSettings.swift */,
-				016A88211B40BDC6005CA489 /* Main.storyboard */,
-				01CEDB791B47268A00775DDD /* Security */,
-				01CEDB7A1B47294100775DDD /* images */,
-				016A88241B40BDC6005CA489 /* Images.xcassets */,
-				016A88261B40BDC6005CA489 /* LaunchScreen.xib */,
+				01CF05011B4D3528002FBD9D /* View */,
+				01CF05001B4D351D002FBD9D /* Model */,
+				01CF05021B4D3532002FBD9D /* Frame */,
 				016A881C1B40BDC6005CA489 /* testTutti.xcdatamodeld */,
 				016A88181B40BDC6005CA489 /* Supporting Files */,
 				01CF1C491B47D90C002DC09E /* Localizable.strings */,
@@ -227,34 +368,112 @@
 		01CEDB7A1B47294100775DDD /* images */ = {
 			isa = PBXGroup;
 			children = (
-				01CEDB7B1B47296800775DDD /* cerrar2.png */,
-				01CEDB7C1B47296800775DDD /* mapaalpha.png */,
-				01CEDB7D1B47296800775DDD /* salida.png */,
-				01CEDB7E1B47296800775DDD /* mapa.png */,
-				01CEDB7F1B47296800775DDD /* entrada.png */,
-				01CEDB801B47296800775DDD /* engage.png */,
-				01CEDB811B47296800775DDD /* apple.png */,
-				01CEDB821B47296800775DDD /* android.png */,
-				01CEDB831B47296800775DDD /* beacon.png */,
-				01CEDB841B47296800775DDD /* btnMarcarIngreso.fw.png */,
-				01CEDB851B47296800775DDD /* btnMarcarSalida.fw.png */,
-				01CEDB861B47296800775DDD /* bubbles2.png */,
-				01CEDB871B47296800775DDD /* contrasena.png */,
-				01CEDB881B47296800775DDD /* fondoEntrada.png */,
-				01CEDB891B47296800775DDD /* gps.png */,
-				01CEDB8A1B47296800775DDD /* historial.png */,
-				01CEDB8B1B47296800775DDD /* llave.png */,
-				01CEDB8C1B47296800775DDD /* pass.png */,
-				01CEDB8D1B47296800775DDD /* registro.png */,
-				01CEDB8E1B47296800775DDD /* settings.png */,
-				01CEDB8F1B47296800775DDD /* tablet.png */,
-				01CEDB901B47296800775DDD /* solulabs.png */,
-				01CEDB911B47296800775DDD /* ugologo3.png */,
-				01CEDB921B47296800775DDD /* user.png */,
-				01CEDB931B47296800775DDD /* usuario.png */,
-				01CEDB941B47296800775DDD /* wifi.png */,
+				018D3AF81BE14C89004AF76C /* AppIcon_2x.png */,
+				018D3AF91BE14C89004AF76C /* AppIcon_3x.png */,
+				018D3A861BE0E10B004AF76C /* android.png */,
+				018D3A871BE0E10B004AF76C /* apple.png */,
+				018D3A881BE0E10B004AF76C /* beacon.png */,
+				018D3A8B1BE0E10B004AF76C /* bubbles2.png */,
+				018D3A8C1BE0E10B004AF76C /* cerrar2.png */,
+				018D3A8D1BE0E10B004AF76C /* contrasena.png */,
+				018D3A8E1BE0E10B004AF76C /* engage.png */,
+				018D3A8F1BE0E10B004AF76C /* entrada.png */,
+				018D3A911BE0E10B004AF76C /* gps.png */,
+				018D3A921BE0E10B004AF76C /* historial.png */,
+				018D3A931BE0E10B004AF76C /* iPhone_In.png */,
+				018D3A941BE0E10B004AF76C /* Iphone_Out.png */,
+				018D3A951BE0E10B004AF76C /* llave.png */,
+				018D3A961BE0E10B004AF76C /* mapa.png */,
+				018D3A971BE0E10B004AF76C /* mapaalpha.png */,
+				018D3A981BE0E10B004AF76C /* pass.png */,
+				018D3A991BE0E10B004AF76C /* registro.png */,
+				018D3A9A1BE0E10B004AF76C /* salida.png */,
+				018D3A9B1BE0E10B004AF76C /* settings.png */,
+				018D3A9C1BE0E10B004AF76C /* solulabs.png */,
+				018D3A9D1BE0E10B004AF76C /* tablet.png */,
+				018D3A9E1BE0E10B004AF76C /* ugologo3.png */,
+				018D3A9F1BE0E10B004AF76C /* user.png */,
+				018D3AA01BE0E10B004AF76C /* usuario.png */,
+				018D3AA11BE0E10B004AF76C /* wifi.png */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		01CF05001B4D351D002FBD9D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				01139EE61C6FD820002D50CA /* Data */,
+				01CF1C501B4816C4002DC09E /* PersistedSettings.swift */,
+				01912E211BDAD5F900588B95 /* RecordCard.swift */,
+				01139EE71C6FD88B002D50CA /* uGoClient.swift */,
+				01139EF41C70916E002D50CA /* uGoConvenience.swift */,
+				01139EED1C6FD930002D50CA /* uGoConstant.swift */,
+				01139EEA1C6FD8DA002D50CA /* CommonHelpers.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		01CF05011B4D3528002FBD9D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0198D03C1BAB8B9700835E51 /* Main.storyboard */,
+				016A881A1B40BDC6005CA489 /* AppDelegate.swift */,
+				01CEDBAF1B47299D00775DDD /* LoginViewController.swift */,
+				01CF04FA1B4D342C002FBD9D /* RecordViewController.swift */,
+				015829811BDCFF2500C31512 /* HistoryCellViewController.swift */,
+				01CF04FC1B4D34AB002FBD9D /* HistoryViewController.swift */,
+				015829831BDD80F300C31512 /* DetailRecordHistoryViewController.swift */,
+				018705791BAF5C4400BDEC98 /* inOutTableViewCell.swift */,
+				01CF04FE1B4D34C2002FBD9D /* ConfigurationViewController.swift */,
+				016A88261B40BDC6005CA489 /* LaunchScreen.xib */,
+				01CEDB7A1B47294100775DDD /* images */,
+				016A88241B40BDC6005CA489 /* Images.xcassets */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		01CF05021B4D3532002FBD9D /* Frame */ = {
+			isa = PBXGroup;
+			children = (
+				01CEDB791B47268A00775DDD /* Security */,
+				0107715F1B416EFD00D70D85 /* Utils.swift */,
+				01CC91691B4AD55700FC5B7A /* Beacon.swift */,
+				01CF1C801B49E0CD002DC09E /* Location.swift */,
+			);
+			name = Frame;
+			sourceTree = "<group>";
+		};
+		01ED56941C309402002D7472 /* testTuttiWatch */ = {
+			isa = PBXGroup;
+			children = (
+				014860581C787FDB0030FBE3 /* icons */,
+				01ED56951C309402002D7472 /* Interface.storyboard */,
+				01ED56981C309402002D7472 /* Assets.xcassets */,
+				01ED569A1C309402002D7472 /* Info.plist */,
+			);
+			path = testTuttiWatch;
+			sourceTree = "<group>";
+		};
+		01ED56A31C309403002D7472 /* testTuttiWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				014860571C787F970030FBE3 /* Controller */,
+				01ED56A61C309403002D7472 /* mainInterfaceController.swift */,
+				01ED56A81C309403002D7472 /* ExtensionDelegate.swift */,
+				01ED56AA1C309403002D7472 /* NotificationController.swift */,
+				01ED56AC1C309403002D7472 /* Assets.xcassets */,
+				01ED56AE1C309403002D7472 /* Info.plist */,
+				01ED56A41C309403002D7472 /* Supporting Files */,
+			);
+			path = "testTuttiWatch Extension";
+			sourceTree = "<group>";
+		};
+		01ED56A41C309403002D7472 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				01ED56A51C309403002D7472 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,10 +486,12 @@
 				016A88111B40BDC6005CA489 /* Sources */,
 				016A88121B40BDC6005CA489 /* Frameworks */,
 				016A88131B40BDC6005CA489 /* Resources */,
+				01ED56B91C309403002D7472 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				01ED56B01C309403002D7472 /* PBXTargetDependency */,
 			);
 			name = testTutti;
 			productName = testTutti;
@@ -292,8 +513,42 @@
 			);
 			name = testTuttiTests;
 			productName = testTuttiTests;
-			productReference = 016A882D1B40BDC6005CA489 /* testTuttiTests.xctest */;
+			productReference = 016A882D1B40BDC6005CA489 /* testTutti.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		01ED56921C309402002D7472 /* testTuttiWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01ED56B81C309403002D7472 /* Build configuration list for PBXNativeTarget "testTuttiWatch" */;
+			buildPhases = (
+				01ED56911C309402002D7472 /* Resources */,
+				01ED56B71C309403002D7472 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				01ED56A21C309403002D7472 /* PBXTargetDependency */,
+			);
+			name = testTuttiWatch;
+			productName = testTuttiWatch;
+			productReference = 01ED56931C309402002D7472 /* testTutti.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		01ED569E1C309403002D7472 /* testTuttiWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01ED56B61C309403002D7472 /* Build configuration list for PBXNativeTarget "testTuttiWatch Extension" */;
+			buildPhases = (
+				01ED569B1C309403002D7472 /* Sources */,
+				01ED569C1C309403002D7472 /* Frameworks */,
+				01ED569D1C309403002D7472 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "testTuttiWatch Extension";
+			productName = "testTuttiWatch Extension";
+			productReference = 01ED569F1C309403002D7472 /* testTutti.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -301,11 +556,14 @@
 		016A880D1B40BDC6005CA489 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "hugo roman";
 				TargetAttributes = {
 					016A88141B40BDC6005CA489 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 9V8CXR6T23;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -314,7 +572,15 @@
 					};
 					016A882C1B40BDC6005CA489 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 9V8CXR6T23;
 						TestTargetID = 016A88141B40BDC6005CA489;
+					};
+					01ED56921C309402002D7472 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					01ED569E1C309403002D7472 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 9V8CXR6T23;
 					};
 				};
 			};
@@ -335,6 +601,8 @@
 			targets = (
 				016A88141B40BDC6005CA489 /* testTutti */,
 				016A882C1B40BDC6005CA489 /* testTuttiTests */,
+				01ED56921C309402002D7472 /* testTuttiWatch */,
+				01ED569E1C309403002D7472 /* testTuttiWatch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -344,36 +612,49 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01CEDBA31B47296800775DDD /* gps.png in Resources */,
-				016A88231B40BDC6005CA489 /* Main.storyboard in Resources */,
-				01CEDBAC1B47296800775DDD /* user.png in Resources */,
-				01CEDBA71B47296800775DDD /* registro.png in Resources */,
-				01CEDB9C1B47296800775DDD /* android.png in Resources */,
-				01CEDB971B47296800775DDD /* salida.png in Resources */,
-				01CEDBAD1B47296800775DDD /* usuario.png in Resources */,
-				01CEDBA51B47296800775DDD /* llave.png in Resources */,
 				016A88281B40BDC6005CA489 /* LaunchScreen.xib in Resources */,
-				01CEDB9F1B47296800775DDD /* btnMarcarSalida.fw.png in Resources */,
-				01CEDBAB1B47296800775DDD /* ugologo3.png in Resources */,
-				01CEDB9A1B47296800775DDD /* engage.png in Resources */,
-				01CEDBA91B47296800775DDD /* tablet.png in Resources */,
-				01CEDBA01B47296800775DDD /* bubbles2.png in Resources */,
-				01CEDB9B1B47296800775DDD /* apple.png in Resources */,
-				01CEDBAE1B47296800775DDD /* wifi.png in Resources */,
-				01CEDB961B47296800775DDD /* mapaalpha.png in Resources */,
-				01CEDB9E1B47296800775DDD /* btnMarcarIngreso.fw.png in Resources */,
-				01CEDBAA1B47296800775DDD /* solulabs.png in Resources */,
+				018D3AB91BE0E10B004AF76C /* tablet.png in Resources */,
+				015E19C61C314ACD00749C09 /* 38mm_80_HomeScreen.png in Resources */,
+				0198D03D1BAB8B9700835E51 /* Main.storyboard in Resources */,
+				018D3ABA1BE0E10B004AF76C /* ugologo3.png in Resources */,
+				015E19CA1C314ACD00749C09 /* 38mm_Out.png in Resources */,
+				018D3AAA1BE0E10B004AF76C /* engage.png in Resources */,
+				018D3AB61BE0E10B004AF76C /* salida.png in Resources */,
+				018D3AB11BE0E10B004AF76C /* llave.png in Resources */,
+				015E19C81C314ACD00749C09 /* 38mm_172_ShortLook.png in Resources */,
+				018D3AB21BE0E10B004AF76C /* mapa.png in Resources */,
+				018D3AAE1BE0E10B004AF76C /* historial.png in Resources */,
+				018D3AFB1BE14C89004AF76C /* AppIcon_3x.png in Resources */,
+				018D3ABD1BE0E10B004AF76C /* wifi.png in Resources */,
+				018D3AAD1BE0E10B004AF76C /* gps.png in Resources */,
+				018D3AB81BE0E10B004AF76C /* solulabs.png in Resources */,
 				016A88251B40BDC6005CA489 /* Images.xcassets in Resources */,
-				01CEDBA21B47296800775DDD /* fondoEntrada.png in Resources */,
-				01CEDB991B47296800775DDD /* entrada.png in Resources */,
-				01CEDB9D1B47296800775DDD /* beacon.png in Resources */,
-				01CEDB981B47296800775DDD /* mapa.png in Resources */,
-				01CEDBA41B47296800775DDD /* historial.png in Resources */,
+				015E19CC1C314ACD00749C09 /* 42mm_80_HomeScreen.png in Resources */,
+				018D3AB71BE0E10B004AF76C /* settings.png in Resources */,
+				015E19C91C314ACD00749C09 /* 38mm_In.png in Resources */,
+				015E19C71C314ACD00749C09 /* 38mm_80_LongLookNotif.png in Resources */,
+				018D3AA91BE0E10B004AF76C /* contrasena.png in Resources */,
+				018D3AA81BE0E10B004AF76C /* cerrar2.png in Resources */,
+				018D3AB31BE0E10B004AF76C /* mapaalpha.png in Resources */,
+				015E19CB1C314ACD00749C09 /* 42mm_55_NotifCenter.png in Resources */,
+				018D3AA21BE0E10B004AF76C /* android.png in Resources */,
+				018D3AB41BE0E10B004AF76C /* pass.png in Resources */,
+				018D3AAB1BE0E10B004AF76C /* entrada.png in Resources */,
+				018D3AAF1BE0E10B004AF76C /* iPhone_In.png in Resources */,
+				018D3AA41BE0E10B004AF76C /* beacon.png in Resources */,
+				018D3AFA1BE14C89004AF76C /* AppIcon_2x.png in Resources */,
+				015E19CD1C314ACD00749C09 /* 42mm_88_LongLookNotif.png in Resources */,
+				018D3AB01BE0E10B004AF76C /* Iphone_Out.png in Resources */,
+				018D3ABC1BE0E10B004AF76C /* usuario.png in Resources */,
+				015E19C51C314ACD00749C09 /* 38mm_48_NotifCenter.png in Resources */,
+				018D3AA31BE0E10B004AF76C /* apple.png in Resources */,
+				015E19D01C314ACD00749C09 /* 42mm_Out.png in Resources */,
+				018D3AA71BE0E10B004AF76C /* bubbles2.png in Resources */,
+				018D3ABB1BE0E10B004AF76C /* user.png in Resources */,
+				015E19CF1C314ACD00749C09 /* 42mm_In.png in Resources */,
+				018D3AB51BE0E10B004AF76C /* registro.png in Resources */,
 				01CF1C471B47D90C002DC09E /* Localizable.strings in Resources */,
-				01CEDB951B47296800775DDD /* cerrar2.png in Resources */,
-				01CEDBA81B47296800775DDD /* settings.png in Resources */,
-				01CEDBA11B47296800775DDD /* contrasena.png in Resources */,
-				01CEDBA61B47296800775DDD /* pass.png in Resources */,
+				015E19CE1C314ACD00749C09 /* 42mm_196_ShortLook.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +665,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		01ED56911C309402002D7472 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01ED56991C309402002D7472 /* Assets.xcassets in Resources */,
+				01ED56BB1C3094C8002D7472 /* registro.png in Resources */,
+				01ED56971C309402002D7472 /* Interface.storyboard in Resources */,
+				01ED56BD1C3094E4002D7472 /* historial.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01ED569D1C309403002D7472 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01ED56AD1C309403002D7472 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -391,18 +691,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01CF1C4F1B481444002DC09E /* Session.swift in Sources */,
-				010771621B41712E00D70D85 /* ViewController.swift in Sources */,
+				01139EE81C6FD88B002D50CA /* uGoClient.swift in Sources */,
+				01139EE21C6FD800002D50CA /* Person.swift in Sources */,
+				01139EE41C6FD800002D50CA /* Mark.swift in Sources */,
 				01CF1C811B49E0CD002DC09E /* Location.swift in Sources */,
+				01CF04FD1B4D34AB002FBD9D /* HistoryViewController.swift in Sources */,
 				016A881E1B40BDC6005CA489 /* testTutti.xcdatamodeld in Sources */,
-				016A88401B416D07005CA489 /* ReachingOut.swift in Sources */,
+				0187057A1BAF5C4400BDEC98 /* inOutTableViewCell.swift in Sources */,
+				015829841BDD80F300C31512 /* DetailRecordHistoryViewController.swift in Sources */,
+				01CF04FB1B4D342C002FBD9D /* RecordViewController.swift in Sources */,
+				01912E221BDAD5F900588B95 /* RecordCard.swift in Sources */,
 				016A881B1B40BDC6005CA489 /* AppDelegate.swift in Sources */,
 				01CC916A1B4AD55700FC5B7A /* Beacon.swift in Sources */,
+				01CF04FF1B4D34C2002FBD9D /* ConfigurationViewController.swift in Sources */,
 				01CF1C511B4816C4002DC09E /* PersistedSettings.swift in Sources */,
-				016A883E1B40C07F005CA489 /* UrlFile.swift in Sources */,
+				01139EF51C70916E002D50CA /* uGoConvenience.swift in Sources */,
+				015829821BDCFF2500C31512 /* HistoryCellViewController.swift in Sources */,
+				01139EEB1C6FD8DA002D50CA /* CommonHelpers.swift in Sources */,
 				01CEDB781B47261B00775DDD /* Keychain.swift in Sources */,
 				01CEDBB01B47299D00775DDD /* LoginViewController.swift in Sources */,
 				010771601B416EFD00D70D85 /* Utils.swift in Sources */,
+				01139EE01C6FD800002D50CA /* CoreDataManager.swift in Sources */,
+				01139EEE1C6FD930002D50CA /* uGoConstant.swift in Sources */,
 				01CEDB741B47253A00775DDD /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +725,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		01ED569B1C309403002D7472 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				013E77C61C81D2B100C74DC9 /* tapticsCall.swift in Sources */,
+				015E19D21C31511500749C09 /* registerController.swift in Sources */,
+				01ED56AB1C309403002D7472 /* NotificationController.swift in Sources */,
+				01ED56A91C309403002D7472 /* ExtensionDelegate.swift in Sources */,
+				01ED56A71C309403002D7472 /* mainInterfaceController.swift in Sources */,
+				013797AF1C43C67300B36181 /* Utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -423,20 +746,19 @@
 			target = 016A88141B40BDC6005CA489 /* testTutti */;
 			targetProxy = 016A882E1B40BDC6005CA489 /* PBXContainerItemProxy */;
 		};
+		01ED56A21C309403002D7472 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01ED569E1C309403002D7472 /* testTuttiWatch Extension */;
+			targetProxy = 01ED56A11C309403002D7472 /* PBXContainerItemProxy */;
+		};
+		01ED56B01C309403002D7472 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01ED56921C309402002D7472 /* testTuttiWatch */;
+			targetProxy = 01ED56AF1C309403002D7472 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		016A88211B40BDC6005CA489 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				016A88221B40BDC6005CA489 /* Base */,
-				01CF1C411B47D60A002DC09E /* es */,
-				01CF1C431B47D615002DC09E /* pt */,
-				01CF1C4D1B47D9E9002DC09E /* en */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		016A88261B40BDC6005CA489 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -455,6 +777,14 @@
 				01CF1C4B1B47D91A002DC09E /* pt */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		01ED56951C309402002D7472 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01ED56961C309402002D7472 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -477,10 +807,12 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: hugo roman (ZB96LJWKF3)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -521,6 +853,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -545,13 +878,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = testTutti/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "soluForB.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = testTutti;
 			};
 			name = Debug;
 		};
@@ -559,13 +896,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = testTutti/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "soluForB.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = testTutti;
 			};
 			name = Release;
 		};
@@ -573,6 +914,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -583,7 +926,9 @@
 				);
 				INFOPLIST_FILE = testTuttiTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "soluForB.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = testTutti;
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/testTutti.app/testTutti";
 			};
 			name = Debug;
@@ -592,14 +937,86 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = testTuttiTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "soluForB.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = testTutti;
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/testTutti.app/testTutti";
+			};
+			name = Release;
+		};
+		01ED56B21C309403002D7472 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = testTuttiWatch_Extension;
+				INFOPLIST_FILE = testTuttiWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SoluForB.testTutti.watchkitapp;
+				PRODUCT_NAME = testTutti;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		01ED56B31C309403002D7472 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = testTuttiWatch_Extension;
+				INFOPLIST_FILE = testTuttiWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SoluForB.testTutti.watchkitapp;
+				PRODUCT_NAME = testTutti;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		01ED56B41C309403002D7472 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = "testTuttiWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SoluForB.testTutti.watchkitapp.watchkitextension;
+				PRODUCT_NAME = testTutti;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		01ED56B51C309403002D7472 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "testTuttiWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SoluForB.testTutti.watchkitapp.watchkitextension;
+				PRODUCT_NAME = testTutti;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
 			};
 			name = Release;
 		};
@@ -629,6 +1046,24 @@
 			buildConfigurations = (
 				016A883B1B40BDC6005CA489 /* Debug */,
 				016A883C1B40BDC6005CA489 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01ED56B61C309403002D7472 /* Build configuration list for PBXNativeTarget "testTuttiWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01ED56B41C309403002D7472 /* Debug */,
+				01ED56B51C309403002D7472 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01ED56B81C309403002D7472 /* Build configuration list for PBXNativeTarget "testTuttiWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01ED56B21C309403002D7472 /* Debug */,
+				01ED56B31C309403002D7472 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -8,83 +8,151 @@
 
 import Foundation
 
-public class Utils {
+enum ConnectionResult{
+    case Success
+    case NoCredentials
+    case NoConnection
+    case ServerError
+    case TimeOut
+}
 
-    class func getCurrentTime() -> String {
+class Utils: NSObject, NSURLSessionDelegate {
+
+    var session : NSURLSession!
+    var withResponse : Bool! = false
+    var withTimeOut : Bool! = false
+    
+    let timeOut : Double = 10
+    
+    func getCurrentTime() -> String {
         let date = NSDate()
         let formatter = NSDateFormatter()
         formatter.timeStyle = .FullStyle
-        var stringValue = formatter.stringFromDate(date)
+        let stringValue = formatter.stringFromDate(date)
         return stringValue
     }
     
-    class func currentTimeMillis() -> Int64{
-        var nowDouble = NSDate().timeIntervalSince1970
+    func currentTimeMillis() -> Int64{
+        let nowDouble = NSDate().timeIntervalSince1970
         return Int64(nowDouble*1000)
     }
-    
-    class func connectToSvc(lsUrl : String, lsUserAndPassword : String, inout completed:ConnectionResult) -> String{
+
+    func connectToSvc(lsUrl : String, inout completed:ConnectionResult) -> String{
         
-        let config = NSURLSessionConfiguration.defaultSessionConfiguration()
+        withResponse = false
+        withTimeOut = false
+        let lsUserAndPassword : String = ""
+//        let lsUserAndPassword : String = mySession.settings.user! + ":" + mySession.settings.password!
+//        let lsUserAndPassword : String = "roberto" + ":" + "carlos"
         let userPasswordData = lsUserAndPassword.dataUsingEncoding(NSUTF8StringEncoding)
-        let base64EncodedCredential = userPasswordData!.base64EncodedStringWithOptions(nil)
+        let base64EncodedCredential = userPasswordData!.base64EncodedStringWithOptions(NSDataBase64EncodingOptions(rawValue:0))
         let authString = "Basic  \(base64EncodedCredential) "
-        config.HTTPAdditionalHeaders = ["Authorization" : authString]
-        let session = NSURLSession(configuration: config)
+        if session == nil {
+            let config = NSURLSessionConfiguration.defaultSessionConfiguration()
+            config.timeoutIntervalForRequest = timeOut
+            config.timeoutIntervalForResource = timeOut
+            config.requestCachePolicy = .ReloadIgnoringLocalCacheData
+            config.HTTPAdditionalHeaders = ["Authorization" : authString]
+            session = NSURLSession(configuration: config, delegate: self, delegateQueue: NSOperationQueue.currentQueue())
+        }
         
-        var running = false
         var retorno : String = ""
         
-        let url = NSURL(string: lsUrl)
-        println(Utils.currentTimeMillis())
-        println("Url \(lsUrl)")
-        let task = session.dataTaskWithURL(url!) {
-            (let data, let response, let error) in
-            if let httpResponse = response as? NSHTTPURLResponse {
-
-                if let hasError = error {
+        print(lsUserAndPassword)
+        print("Url \(lsUrl)")
+        session.dataTaskWithURL(NSURL(string: lsUrl)!)
+            { (data, response, error) in
+            guard error == nil
+                else {
                     switch error!.code{
                     case -999:
                         completed = .NoCredentials
-                        println("noCredentials")
+                        print("noCredentials")
                     default:
                         completed = .ServerError
-                        println("serverError")
+                        print("serverError")
                     }
-                } else {
-                    switch httpResponse.statusCode {
-                    case 200:
-                        completed = .Success
-                        println("success")
-                    case 401:
-                        completed = .NoCredentials
-                        println("noCredentials")
-                    case 500:
-                        completed = .ServerError
-                        println("serverError")
-                    default:
-                        completed = .ServerError
-                        println("serverError")
-                    }
-                }
-                println("completed: \(completed)")
-                
-                let dataString = NSString(data: data!, encoding: NSUTF8StringEncoding)
-                println(dataString)
-                println(Utils.currentTimeMillis())
-                if let retValue = (dataString as? String) {
-                    retorno = retValue
-                }
+                    return
             }
-            running = false
+            guard let response = response as? NSHTTPURLResponse
+                else {
+                    NSLog("not an HTTP response")
+                    return
+            }
+            switch response.statusCode {
+                case 200:
+                    completed = .Success
+                    print("success")
+                case 401:
+                    completed = .NoCredentials
+                    print("noCredentials")
+                case 408:
+                    completed = .TimeOut
+                    print("timeOut")
+                case 500:
+                    completed = .ServerError
+                    print("serverError")
+                default:
+                    completed = .ServerError
+                    print("serverError")
+                }
+            let dataString = NSString(data: data!, encoding: NSUTF8StringEncoding)
+            if let retValue = (dataString as? String) {
+                retorno = retValue
+            }
+            self.withResponse = true
+            print(self.currentTimeMillis())
+            }.resume()
+        while true {
+            if withResponse! {
+                return (retorno)
+            }
+            if withTimeOut! {
+                completed = .TimeOut
+                return (retorno)
+            }
         }
+    }
+    
+    
+    func parseJSONString(myString: String)-> AnyObject? {
         
-        running = true
-        task.resume()
-        while running {
+        let data = myString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
+        
+        if let jsonData = data {
+            return try! NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.MutableContainers)
+        } else {
+            return nil
+        }
+    }
+
+    func URLSession(session: NSURLSession, task: NSURLSessionTask, didReceiveChallenge challenge: NSURLAuthenticationChallenge, completionHandler: (NSURLSessionAuthChallengeDisposition, NSURLCredential?) -> Void) {
+        print("challenge %@", challenge.protectionSpace.authenticationMethod)
+        if [NSURLAuthenticationMethodDefault, NSURLAuthenticationMethodHTTPBasic, NSURLAuthenticationMethodHTTPDigest].contains(challenge.protectionSpace.authenticationMethod) {
+            if challenge.previousFailureCount > 0 {
+                print("Alert Please check the credential")
+                completionHandler(NSURLSessionAuthChallengeDisposition.CancelAuthenticationChallenge, nil)
             }
-        return (retorno)
+            else {
+//                let credential = NSURLCredential(user: mySession.settings.user!, password: mySession.settings.password!, persistence: .ForSession)
+                let credential = NSURLCredential(user: "hroman", password: "JavierA17", persistence: .ForSession)
+            completionHandler(.UseCredential, credential)
+            }
+        } else {
+            completionHandler(.PerformDefaultHandling, nil);
+        }
+    }
+    
+    func URLSessionDidFinishEventsForBackgroundURLSession(session: NSURLSession) {
+        print("URLSessionDidFinishEventsForBackgroundURLSession: \(session)")
+    }
+
+    func URLSession(session: NSURLSession, didBecomeInvalidWithError error: NSError?) {
+        print("didBecomeInvalidWithError: \(error)")
+    }
+    func ping()->Void{
+        
     }
 
 }
-
+let myUtils = Utils()

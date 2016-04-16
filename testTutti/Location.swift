@@ -13,7 +13,7 @@ class Location: NSObject, CLLocationManagerDelegate {
     
     //for location
     var localMgr: CLLocationManager!
-    var localPos: CLLocation!
+    var localPos: CLLocation?
     var locationFixAchieved = false
     var locationStatus : String = ""
     
@@ -21,31 +21,33 @@ class Location: NSObject, CLLocationManagerDelegate {
         super.init()
         localMgr  = CLLocationManager()
         localMgr.delegate = self
-        localMgr.desiredAccuracy = kCLLocationAccuracyBest
+        localMgr.desiredAccuracy = kCLLocationAccuracyBestForNavigation
         localMgr.requestAlwaysAuthorization()
-        self.startLocationManager()
+        localMgr.startUpdatingLocation()
+    }
+    
+    func showMyLocation(){
+        localMgr.requestLocation()
     }
 
-    func ping()->Void{
-        
+    func hideMyLocation(){
+        localMgr.stopUpdatingLocation()
     }
     
-    func startLocationManager()->Void{
-        localMgr.startMonitoringSignificantLocationChanges()
+    func startMyLocation(){
+        localMgr.startUpdatingLocation()
     }
     
-    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        //        if (locationFixAchieved == false) {
-        locationFixAchieved = true
-        var locationArray = locations as NSArray
-        var locationObj = locationArray.lastObject as! CLLocation!
-        localPos = locationObj
-        //            println(localPos.coordinate.latitude)
-        //            println(localPos.coordinate.longitude)
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print("Current location: \(locations)")
+        if let location = locations.first {
+            localPos = location
+        } else {
+        }
     }
     
     // authorization status
-    func locationManager(manager: CLLocationManager!,
+    func locationManager(manager: CLLocationManager,
         didChangeAuthorizationStatus status: CLAuthorizationStatus) {
             var shouldIAllow = false
             
@@ -64,13 +66,13 @@ class Location: NSObject, CLLocationManagerDelegate {
             if (shouldIAllow == true) {
                 NSLog("Location to Allowed")
                 // Start location services
-                localMgr.startUpdatingLocation()
             } else {
                 NSLog("Denied access: \(locationStatus)")
             }
     }
     
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print("Error finding location: \(error.localizedDescription)")
+    }
 }
-
-let myLocation = Location()
 

@@ -6,10 +6,11 @@
 //  Copyright (c) 2015 hugo roman. All rights reserved.
 //
 
-import Foundation
+/*
 import Foundation
 import CoreLocation
 import CoreBluetooth
+
 
 class Beacon: NSObject, CLLocationManagerDelegate, CBPeripheralManagerDelegate {
     
@@ -24,18 +25,12 @@ class Beacon: NSObject, CLLocationManagerDelegate, CBPeripheralManagerDelegate {
     let beaconIdentifier:String = "getGelo.com"
     var myBTManager:CBPeripheralManager!
     var advertisedData:[NSDictionary]!
-
+    var _broadcastBeaconDict : Dictionary<String, String>? = nil
+    
     override init() {
         super.init()
         myBTManager = CBPeripheralManager(delegate: self, queue: nil)
-/*
-        localMgr  = CLLocationManager()
-        localMgr.delegate = self
-        localMgr.desiredAccuracy = kCLLocationAccuracyBest
-        localMgr.requestAlwaysAuthorization()
-        self.startLocationManager()
-*/
-}
+    }
     
     func ping()->Void{
         
@@ -45,18 +40,18 @@ class Beacon: NSObject, CLLocationManagerDelegate, CBPeripheralManagerDelegate {
         localMgr.startMonitoringSignificantLocationChanges()
     }
     
-    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         //        if (locationFixAchieved == false) {
         locationFixAchieved = true
-        var locationArray = locations as NSArray
-        var locationObj = locationArray.lastObject as! CLLocation!
+        let locationArray = locations as NSArray
+        let locationObj = locationArray.lastObject as! CLLocation!
         localPos = locationObj
         //            println(localPos.coordinate.latitude)
         //            println(localPos.coordinate.longitude)
     }
     
     // authorization status
-    func locationManager(manager: CLLocationManager!,
+    func locationManager(manager: CLLocationManager,
         didChangeAuthorizationStatus status: CLAuthorizationStatus) {
             var shouldIAllow = false
             
@@ -83,14 +78,14 @@ class Beacon: NSObject, CLLocationManagerDelegate, CBPeripheralManagerDelegate {
 
     //MARK locationManagerBeacons
     
-    func locationManager(localMgr: CLLocationManager!,
-        didRangeBeacons beacons: [AnyObject]!,
-        inRegion region: CLBeaconRegion!) {
-            println("didRangeBeacons ");
+    func locationManager(localMgr: CLLocationManager,
+        didRangeBeacons beacons: [CLBeacon],
+        inRegion region: CLBeaconRegion) {
+            print("didRangeBeacons ");
     var message:String = ""
     
     if(beacons.count > 0) {
-        let nearestBeacon:CLBeacon = beacons[0] as! CLBeacon
+        let nearestBeacon:CLBeacon = beacons[0] as CLBeacon
         switch nearestBeacon.proximity {
         case CLProximity.Far:
             message = "You are far away from the beacon"
@@ -111,7 +106,7 @@ class Beacon: NSObject, CLLocationManagerDelegate, CBPeripheralManagerDelegate {
         message = "No beacons are nearby"
     }
     
-    println(message)
+    print(message)
     //sendLocalNotificationWithMessage(message)
     }
     
@@ -139,23 +134,23 @@ class Beacon: NSObject, CLLocationManagerDelegate, CBPeripheralManagerDelegate {
         localMgr!.stopUpdatingLocation()
     }
     
-    func peripheralManagerDidUpdateState(peripheral: CBPeripheralManager!) {
+    func peripheralManagerDidUpdateState(peripheral: CBPeripheralManager) {
 
         if peripheral.state == CBPeripheralManagerState.PoweredOn {
-            println("BT Broadcasting...")
+            print("BT Broadcasting...")
     //start broadcasting
-    //        myBTManager!.startAdvertising(_broadcastBeaconDict)
+            myBTManager!.startAdvertising(_broadcastBeaconDict)
         } else if peripheral.state == CBPeripheralManagerState.PoweredOff {
-            println("BT Stopped")
+            print("BT Stopped")
     //Pedir que se active el BT
             myBTManager!.stopAdvertising()
         } else if peripheral.state == CBPeripheralManagerState.Unsupported {
-            println("BT Unsupported")
+            print("BT Unsupported")
         } else if peripheral.state == CBPeripheralManagerState.Unauthorized {
-            println("BT This option is not allowed by your application")
+            print("BT This option is not allowed by your application")
         }
         }
 }
 
 let myBeacon = Beacon()
-
+*/

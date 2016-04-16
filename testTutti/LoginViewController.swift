@@ -20,46 +20,56 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var loginButton: UIButton!
     
     @IBAction func loginPressed(sender: AnyObject) {
-
-        let usr = self.userTextField.text!
-        let pwd = self.passwordTextField.text!
-        var ret : ConnectionResult = .NoCredentials
-        
-        if (usr != "" && pwd != "") {
-            //validate svc and if ok insert or update account
-            mySession.settings.user = usr
-            mySession.settings.password = pwd
-            println(Utils.currentTimeMillis())
-            var ret:ConnectionResult = .NoCredentials
-            println(Utils.currentTimeMillis())
-            mySession.uGOLogin(&ret)
-            if (ret == .Success){
-            }
-        }
+        uGoClient.sharedInstance().settings.user = userTextField.text
+        uGoClient.sharedInstance().settings.password = passwordTextField.text
+        logueate()
     }
+    @IBAction func unwindToMenu(segue: UIStoryboardSegue) {}
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("on viewDidLoad")
         userTextField.delegate = self
         passwordTextField.delegate = self
-        
-        if let usr = mySession.settings.user {
-            if let pwd = mySession.settings.password {
+        logueate()
+    }
+
+    func logueate ()-> Void{
+        if let usr = uGoClient.sharedInstance().settings.user {
+            if let pwd = uGoClient.sharedInstance().settings.password {
                 if (usr != "" && pwd != "" ){
-                    println(Utils.currentTimeMillis())
-                    var ret:ConnectionResult = .NoCredentials
-                    println(Utils.currentTimeMillis())
-                    mySession.uGOLogin(&ret)
-                    if (ret == .Success){
-                        self.performSegueWithIdentifier("loginSegue", sender: self)
+                    userTextField.text = usr
+                    passwordTextField.text = pwd
+                    print(myUtils.currentTimeMillis())
+                    uGoClient.sharedInstance().uGoLogin(){(result, error) -> Void in
+                        if let _ = result as ConnectionResult! {
+                            uGoClient.sharedInstance().isConnected = true
+                            if (result == ConnectionResult.Success){
+                                dispatch_async(dispatch_get_main_queue(), {
+                                    print(myUtils.currentTimeMillis())
+                                    self.performSegueWithIdentifier("login2DetailSegue", sender: self)
+                                })
+                            }
+                            if (result == ConnectionResult.ServerError){
+                                CommonHelpers.presentOneAlertController(self, alertTitle: "Error", alertMessage: "Error en servidor uGo", myActionTitle: "Error", myActionStyle: .Default)
+                            }
+                            if (result == ConnectionResult.NoCredentials){
+                                CommonHelpers.presentOneAlertController(self, alertTitle: "Error", alertMessage: "Error en credenciales uGo", myActionTitle: "Error", myActionStyle: .Default)
+                            }
+                            if (result == ConnectionResult.TimeOut){
+                                CommonHelpers.presentOneAlertController(self, alertTitle: "Error", alertMessage: "uGo con time out", myActionTitle: "Error", myActionStyle: .Default)
+                            }
+                            if (result == ConnectionResult.NoConnection){
+                                CommonHelpers.presentOneAlertController(self, alertTitle: "Error", alertMessage: "uGo sin comunicación", myActionTitle: "Error", myActionStyle: .Default)
+                            }
+                        }
                     }
                 }
             }
         }
+        
     }
-    
     override func viewDidAppear(animated: Bool) {
-        //
     }
     
     override func viewDidDisappear(animated: Bool) {

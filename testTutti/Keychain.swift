@@ -129,7 +129,7 @@ public class Keychain
         let GenericPasswordAttribute: String! = kSecClassGenericPassword as String
         let AccountAttribute: String! = kSecAttrAccount as String
         let ClassAttribute: String! = kSecClass as String
-        let ValueDataAttribute: String! = kSecValueData as String
+//        let ValueDataAttribute: String! = kSecValueData as String
         let SecServiceAttribute: String! = kSecAttrService as String
         let SecAccessibleAttribute: String! = kSecAttrAccessible as String
         let ReturnDataAttribute: String! = kSecReturnData as String
@@ -144,18 +144,17 @@ public class Keychain
         
         attributes.removeObjectForKey(kSecValueData)
         
-        var result:Unmanaged<AnyObject>?
-        let statusCode: OSStatus = SecItemCopyMatching(attributes, &result);
-        if statusCode == 0
+//        var result:Unmanaged<AnyObject>?
+//        let statusCode: OSStatus = SecItemCopyMatching(attributes, &result);
+        var result: AnyObject?
+        let statusCode = SecItemCopyMatching(attributes, &result)
+        if statusCode == noErr
         {
-            let opaque = result?.toOpaque()
+//            let opaque = result?
             var secretValue: NSString?
-            if let op = opaque
-            {
-                let retrievedData = Unmanaged<NSData>.fromOpaque(op).takeUnretainedValue()
-                secretValue = NSString(data:retrievedData, encoding:NSUTF8StringEncoding)
+                let retrievedData = result as? NSData
+                secretValue = NSString(data:retrievedData!, encoding:NSUTF8StringEncoding)
                 return Account(userName: userName, secret: secretValue! as String, keychain: self)
-            }
         }
         
         return nil // Should handle this better

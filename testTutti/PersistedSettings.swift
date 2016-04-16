@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PersistedSettings{
+class PersistedSettings: NSObject {
     private let lastArrivalKey = "lastArrival"
     private let lastDepartureKey = "lastDeparture"
     private let userKey = "uGoUser"
@@ -84,14 +84,14 @@ class PersistedSettings{
             return _lastOnline
         }
         set(newOnline){
-            println(newOnline)
+            print(newOnline)
             _lastOnline = newOnline
             defaults.setObject(newOnline, forKey: lastOnlineKey)
             defaults.synchronize()
         }
     }
     
-    init(){
+    override init(){
         defaults = NSUserDefaults.standardUserDefaults()
         _lastArrival = defaults.objectForKey(lastArrivalKey) as? NSDate
         _lastDeparture = defaults.objectForKey(lastDepartureKey) as? NSDate
@@ -99,4 +99,13 @@ class PersistedSettings{
         _password = defaults.objectForKey(passKey) as? String
         _lastOnline = defaults.objectForKey(lastOnlineKey) as? NSDate
     }
+    func forgetMe(){
+        _lastArrival = nil
+        _lastDeparture = nil
+        _user = ""
+        _password = ""
+        _lastOnline = nil
+        defaults.synchronize()
+    }
+
 }
