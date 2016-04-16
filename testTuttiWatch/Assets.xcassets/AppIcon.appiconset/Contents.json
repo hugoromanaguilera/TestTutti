@@ -3,7 +3,7 @@
     {
       "size" : "24x24",
       "idiom" : "watch",
-      "filename" : "38mm_48_NotifCenter-1.png",
+      "filename" : "38mm_48_NotifCenter.png",
       "scale" : "2x",
       "role" : "notificationCenter",
       "subtype" : "38mm"
@@ -19,21 +19,21 @@
     {
       "size" : "29x29",
       "idiom" : "watch",
-      "filename" : "38mm_80_HomeScreen.png",
+      "filename" : "38mm_58_HomeScreen.png",
       "role" : "companionSettings",
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "watch",
-      "filename" : "42mm_80_HomeScreen.png",
+      "filename" : "42mm_87_HomeScreen.png",
       "role" : "companionSettings",
       "scale" : "3x"
     },
     {
       "size" : "40x40",
       "idiom" : "watch",
-      "filename" : "38mm_48_NotifCenter.png",
+      "filename" : "38mm_80_HomeScreen.png",
       "scale" : "2x",
       "role" : "appLauncher",
       "subtype" : "38mm"

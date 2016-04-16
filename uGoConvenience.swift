@@ -21,8 +21,9 @@ extension uGoClient {
     }
     
     func uGOIn(completionHandler:(result: ConnectionResult!, error: NSError?) -> Void)->Void{
-        let _ = uGoClient.sharedInstance().taskForExecuteMethod(Constants.urlIn + "?" + query(setParams("I")), completionHandler: { (var complete, resultado, error) -> Void in
+        let _ = uGoClient.sharedInstance().taskForExecuteMethod(Constants.urlIn + "?" + query(setParams("I")), completionHandler: { ( complete, resultado, error) -> Void in
             let requestBodyData: NSData = resultado!.dataUsingEncoding(NSUTF8StringEncoding)!
+            var logicalResult: ConnectionResult = complete
             var parsedResult: AnyObject!
             do {
                 parsedResult = try NSJSONSerialization.JSONObjectWithData(requestBodyData, options: .AllowFragments) as? [String: AnyObject]
@@ -49,16 +50,17 @@ extension uGoClient {
                 return
             }
             if resultTransaction == "00" {
-                complete = .Success
+                logicalResult = .Success
             }
             
-            completionHandler(result: complete, error: error)
+            completionHandler(result: logicalResult, error: error)
         })
     }
     
     func uGOOut(completionHandler:(result: ConnectionResult!, error: NSError?) -> Void)->Void{
-        let _ = uGoClient.sharedInstance().taskForExecuteMethod(Constants.urlOut + "?" + query(setParams("S")), completionHandler: { (var complete, resultado, error) -> Void in
+        let _ = uGoClient.sharedInstance().taskForExecuteMethod(Constants.urlOut + "?" + query(setParams("S")), completionHandler: { ( complete, resultado, error) -> Void in
             let requestBodyData: NSData = resultado!.dataUsingEncoding(NSUTF8StringEncoding)!
+            var logicalResult: ConnectionResult = complete
             var parsedResult: AnyObject!
             do {
                 parsedResult = try NSJSONSerialization.JSONObjectWithData(requestBodyData, options: .AllowFragments) as? [String: AnyObject]
@@ -85,9 +87,9 @@ extension uGoClient {
                 return
             }
             if resultTransaction == "00" {
-                complete = .Success
+                logicalResult = .Success
             }
-            completionHandler(result: complete, error: error)
+            completionHandler(result: logicalResult, error: error)
         })
     }
     
@@ -192,8 +194,14 @@ extension uGoClient {
     }
     
     func escape(string: String) -> String {
-        let legalURLCharactersToBeEscaped: CFStringRef = ":&=;+!@#()',*"
-        return CFURLCreateStringByAddingPercentEscapes(nil, string, nil, legalURLCharactersToBeEscaped, CFStringBuiltInEncodings.UTF8.rawValue) as String
+        let legalURLCharactersToBeEscaped = NSCharacterSet.URLQueryAllowedCharacterSet().mutableCopy()
+        legalURLCharactersToBeEscaped.addCharactersInString(":&=;+!@#()',*")
+        let returnStr = string.stringByAddingPercentEncodingWithAllowedCharacters(legalURLCharactersToBeEscaped as! NSCharacterSet)
+        return returnStr!
+//        return CFURLCreateStringByAddingPercentEscapes(nil, string, nil, legalURLCharactersToBeEscaped, CFStringBuiltInEncodings.UTF8.rawValue) as String
+/*
+/Users/hroman/Dropbox/desktop/Software/testTutti2/uGoConvenience.swift:198:16: 'CFURLCreateStringByAddingPercentEscapes' was deprecated in iOS 9.0: Use [NSString stringByAddingPercentEncodingWithAllowedCharacters:] instead, which always uses the recommended UTF-8 encoding, and which encodes for a specific URL component or subcomponent (since each URL component or subcomponent has different rules for what characters are valid).
+*/
     }
     
     func queryComponents(key: String, _ value: AnyObject) -> [(String, String)] {

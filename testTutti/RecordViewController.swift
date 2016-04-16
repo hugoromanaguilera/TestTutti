@@ -117,7 +117,7 @@ class RecordViewController: UIViewController, WCSessionDelegate {
     
     //Swift
     func sessionWatchStateDidChange(session: WCSession) {
-        print(__FUNCTION__)
+        print(#function)
         print(session)
         print("reachable:\(session.reachable)")
     }
