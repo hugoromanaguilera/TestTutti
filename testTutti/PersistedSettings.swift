@@ -99,6 +99,7 @@ class PersistedSettings: NSObject {
         _password = defaults.objectForKey(passKey) as? String
         _lastOnline = defaults.objectForKey(lastOnlineKey) as? NSDate
     }
+    
     func forgetMe(){
         _lastArrival = nil
         _lastDeparture = nil

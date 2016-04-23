@@ -16,17 +16,14 @@ class ConfigurationViewController: UIViewController {
     
     @IBOutlet var userNameLabel: UILabel!
     
+    @IBOutlet weak var myActivity: UIActivityIndicatorView!
+    
     @IBAction func uGOForgetMe(sender: AnyObject) {
-        print(myUtils.currentTimeMillis())
-        uGoClient.sharedInstance().uGOForgetMe()
-        userNameLabel.text = "N/I"
-        print(myUtils.currentTimeMillis())
-        performSegueWithIdentifier("unwindToMenu", sender: self)
-
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        myActivity.hidden = true
         userNameLabel.text = uGoClient.sharedInstance().settings.user
     }
     
@@ -37,6 +34,27 @@ class ConfigurationViewController: UIViewController {
     override func viewDidDisappear(animated: Bool) {
         //
     }
+ 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if(segue.identifier == "unwindToMenu") {
+            
+            print(myUtils.currentTimeMillis())
+            myActivity.hidden = false
+            myActivity.startAnimating()
+            uGoClient.sharedInstance().uGOForgetMe()
+            userNameLabel.text = "N/I"
+            print(myUtils.currentTimeMillis())
+            myActivity.hidden = true
+            myActivity.stopAnimating()
+            
+            let yourNextViewController = (segue.destinationViewController as! LoginViewController)
+            yourNextViewController.userTextField.text = ""
+            yourNextViewController.passwordTextField.text = ""
+
+        }
+    }
+    
 }
 
 

@@ -20,8 +20,10 @@ class DetailRecordHistoryViewController: UIViewController {
     
     @IBOutlet weak var atLabel: UILabel!
     
+    @IBOutlet weak var myActivity: UIActivityIndicatorView!
+    
     var initialLocation = CLLocation()
-    var myRecord : RecordCard!
+    var myRecord : Mark!
     var session: NSURLSession!
     var appDelegate: AppDelegate!
     
@@ -41,6 +43,8 @@ class DetailRecordHistoryViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         
+        myActivity.hidden = false
+        myActivity.startAnimating()
         eventLabel.text = myRecord.rcTipoEvento
         datetimeLabel.text = myRecord.rcFecServidor
         let dbLatitud = NSNumberFormatter().numberFromString(myRecord.rcValLatitud)?.doubleValue
@@ -62,6 +66,8 @@ class DetailRecordHistoryViewController: UIViewController {
         /* 4. Make the request */
         let task = session.dataTaskWithRequest(request) { (data, response, error) in
                 
+        self.myActivity.hidden = true
+        self.myActivity.stopAnimating()
         /* GUARD: Was there an error? */
         guard (error == nil) else {
             print("There was an error with your request: \(error)")
@@ -116,6 +122,7 @@ class DetailRecordHistoryViewController: UIViewController {
             }
             if let myAddress = results[0]["formatted_address"] as? String {
                 dispatch_async(dispatch_get_main_queue()) {
+                    
                     self.atLabel.text = myAddress
                 }
             } else {

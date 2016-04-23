@@ -8,7 +8,7 @@
         <!--LoginUGO-->
         <scene sceneID="LLC-eM-1ZP">
             <objects>
-                <viewController title="LoginUGO" id="GJm-up-zuo" customClass="LoginViewController" customModule="personalUGo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="LoginUGO" id="GJm-up-zuo" customClass="LoginViewController" customModule="testTutti" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6bF-6j-Tgo"/>
                         <viewControllerLayoutGuide type="bottom" id="32v-cf-zIT"/>
@@ -52,6 +52,9 @@
                                     <action selector="loginPressed:" destination="GJm-up-zuo" eventType="touchUpInside" id="VDt-bx-4bt"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="center" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="czO-og-dVy">
+                                <rect key="frame" x="290" y="404" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.098039217293262482" green="0.098039217293262482" blue="0.098039217293262482" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -62,11 +65,13 @@
                             <constraint firstItem="32v-cf-zIT" firstAttribute="top" secondItem="GyH-eA-o8v" secondAttribute="bottom" constant="10" id="dmB-7w-3o9"/>
                             <constraint firstAttribute="centerX" secondItem="Qdb-qn-hHG" secondAttribute="centerX" id="hE3-Er-Yhb"/>
                             <constraint firstItem="Qdb-qn-hHG" firstAttribute="top" secondItem="6bF-6j-Tgo" secondAttribute="bottom" constant="10" id="jyF-Ve-1br"/>
+                            <constraint firstItem="czO-og-dVy" firstAttribute="centerX" secondItem="hqz-Rt-TSM" secondAttribute="centerX" id="zxE-E0-Rs6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mGK-cD-F4S"/>
                     <connections>
                         <outlet property="loginButton" destination="8wd-Tt-JtL" id="8Ad-kC-lZQ"/>
+                        <outlet property="myActivity" destination="czO-og-dVy" id="gz4-KK-7aL"/>
                         <outlet property="passwordTextField" destination="PMY-1U-q3u" id="nyY-Qi-RJs"/>
                         <outlet property="userTextField" destination="DZ3-30-Hrq" id="JMS-EU-PE2"/>
                         <segue destination="gRM-7f-6tz" kind="show" identifier="login2DetailSegue" id="EPB-kd-zlv"/>
@@ -99,7 +104,7 @@
         <!--Record-->
         <scene sceneID="mHc-Mo-ess">
             <objects>
-                <viewController title="Record" id="cCO-JX-8B0" customClass="RecordViewController" customModule="personalUGo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Record" id="cCO-JX-8B0" customClass="RecordViewController" customModule="testTutti" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="05R-nU-syP"/>
                         <viewControllerLayoutGuide type="bottom" id="hFt-tM-8rV"/>
@@ -175,13 +180,17 @@
         <!--history-->
         <scene sceneID="LbB-8X-7he">
             <objects>
-                <tableViewController title="history" id="ld3-fu-EPa" customClass="HistoryViewController" customModule="personalUGo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="history" id="ld3-fu-EPa" customClass="HistoryViewController" customModule="testTutti" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="95" sectionHeaderHeight="28" sectionFooterHeight="28" id="V2g-1Y-Tj0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="reD-5W-wjF">
+                            <rect key="frame" x="0.0" y="197" width="600" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="historyCell" rowHeight="105" id="m5r-Ic-MNu" customClass="HistoryCell" customModule="personalUGo" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="historyCell" rowHeight="105" id="m5r-Ic-MNu" customClass="HistoryCell" customModule="testTutti" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="105"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m5r-Ic-MNu" id="857-dc-JFS">
@@ -254,6 +263,9 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" systemItem="history" id="BLc-1K-f6V"/>
+                    <connections>
+                        <outlet property="myActivity" destination="reD-5W-wjF" id="Bez-kO-Z4K"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bmh-sB-xkC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -262,7 +274,7 @@
         <!--Detail Record History View Controller-->
         <scene sceneID="y4F-kf-vKS">
             <objects>
-                <viewController storyboardIdentifier="DetailRecordHistoryViewController" id="peM-fn-uM5" customClass="DetailRecordHistoryViewController" customModule="personalUGo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailRecordHistoryViewController" id="peM-fn-uM5" customClass="DetailRecordHistoryViewController" customModule="testTutti" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8Qa-f1-4BP"/>
                         <viewControllerLayoutGuide type="bottom" id="dBC-xR-RXz"/>
@@ -292,6 +304,9 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="lnj-NU-q7o">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -301,9 +316,11 @@
                             <constraint firstItem="YyY-qW-FIH" firstAttribute="top" secondItem="8Qa-f1-4BP" secondAttribute="bottom" constant="62" id="U6X-Cg-ciM"/>
                             <constraint firstItem="2Dc-MW-NcP" firstAttribute="leading" secondItem="1Hg-9i-9fz" secondAttribute="leadingMargin" constant="34" id="Wv3-JI-oaS"/>
                             <constraint firstItem="8fc-3E-z04" firstAttribute="centerY" secondItem="1Hg-9i-9fz" secondAttribute="centerY" id="ZC6-PF-2ag"/>
+                            <constraint firstItem="8fc-3E-z04" firstAttribute="centerX" secondItem="1Hg-9i-9fz" secondAttribute="centerX" id="aZC-LZ-NDd"/>
                             <constraint firstItem="2Dc-MW-NcP" firstAttribute="top" secondItem="8Qa-f1-4BP" secondAttribute="bottom" constant="62" id="an0-ZC-0yV"/>
                             <constraint firstItem="8fc-3E-z04" firstAttribute="centerX" secondItem="1Hg-9i-9fz" secondAttribute="centerX" id="avL-6U-ek0"/>
                             <constraint firstItem="8fc-3E-z04" firstAttribute="top" secondItem="YdX-dg-vcA" secondAttribute="bottom" constant="23" id="fx8-g7-8uN"/>
+                            <constraint firstItem="8fc-3E-z04" firstAttribute="centerY" secondItem="1Hg-9i-9fz" secondAttribute="centerY" id="xoi-Rm-07W"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YdX-dg-vcA" secondAttribute="trailing" constant="33" id="xxm-6a-fQB"/>
                         </constraints>
                     </view>
@@ -311,6 +328,7 @@
                         <outlet property="atLabel" destination="YdX-dg-vcA" id="R4X-K6-hCY"/>
                         <outlet property="datetimeLabel" destination="YyY-qW-FIH" id="bHv-e3-fjW"/>
                         <outlet property="eventLabel" destination="2Dc-MW-NcP" id="s0f-42-kxX"/>
+                        <outlet property="myActivity" destination="lnj-NU-q7o" id="ajU-m1-aK6"/>
                         <outlet property="myMap" destination="8fc-3E-z04" id="cj4-Gg-r6J"/>
                     </connections>
                 </viewController>
@@ -321,7 +339,7 @@
         <!--Configuration-->
         <scene sceneID="wKe-TK-IlX">
             <objects>
-                <viewController title="Configuration" id="A0Z-M3-Mec" customClass="ConfigurationViewController" customModule="personalUGo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Configuration" id="A0Z-M3-Mec" customClass="ConfigurationViewController" customModule="testTutti" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="W74-Gl-gMB"/>
                         <viewControllerLayoutGuide type="bottom" id="wew-Kq-sgg"/>
@@ -350,14 +368,19 @@
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="uGOForgetMe:" destination="A0Z-M3-Mec" eventType="touchUpInside" id="Gtb-Ir-MvB"/>
+                                    <segue destination="P5i-Hr-UDu" kind="unwind" identifier="unwindToMenu" unwindAction="unwindToMenu:" id="i5p-gH-5qN"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="L7G-V3-xHq">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="fIY-ma-VA0" firstAttribute="top" secondItem="W74-Gl-gMB" secondAttribute="bottom" constant="60" id="AtP-Xz-21X"/>
                             <constraint firstItem="UdP-mM-YvS" firstAttribute="centerX" secondItem="rFH-tv-3oC" secondAttribute="centerX" id="GkI-cL-ZI3"/>
+                            <constraint firstItem="L7G-V3-xHq" firstAttribute="centerX" secondItem="rFH-tv-3oC" secondAttribute="centerX" id="IQ8-xc-dUI"/>
+                            <constraint firstItem="L7G-V3-xHq" firstAttribute="centerY" secondItem="rFH-tv-3oC" secondAttribute="centerY" id="nPc-KD-N5o"/>
                             <constraint firstItem="fIY-ma-VA0" firstAttribute="centerX" secondItem="UdP-mM-YvS" secondAttribute="centerX" id="ohf-Ok-9C0"/>
                             <constraint firstItem="UdP-mM-YvS" firstAttribute="top" secondItem="fIY-ma-VA0" secondAttribute="bottom" constant="80" id="pxV-vb-nfV"/>
                             <constraint firstItem="UdP-mM-YvS" firstAttribute="centerY" secondItem="rFH-tv-3oC" secondAttribute="centerY" id="xLs-QB-JZj"/>
@@ -365,12 +388,12 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="configuration" image="settings.png" id="SKV-Uz-DI4"/>
                     <connections>
+                        <outlet property="myActivity" destination="L7G-V3-xHq" id="lm2-zo-Z2o"/>
                         <outlet property="userNameLabel" destination="fIY-ma-VA0" id="ddP-4Q-Yis"/>
-                        <segue destination="jRP-vT-RFI" kind="unwind" identifier="unwindToMenu" unwindAction="unwindToMenu:" id="dE6-W0-36b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wTu-FA-wUO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="jRP-vT-RFI" userLabel="Exit" sceneMemberID="exit"/>
+                <exit id="P5i-Hr-UDu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2404" y="-324"/>
         </scene>

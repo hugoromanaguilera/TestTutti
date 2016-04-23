@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		010771601B416EFD00D70D85 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0107715F1B416EFD00D70D85 /* Utils.swift */; };
 		01139EE01C6FD800002D50CA /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01139EDD1C6FD800002D50CA /* CoreDataManager.swift */; };
-		01139EE21C6FD800002D50CA /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01139EDE1C6FD800002D50CA /* Person.swift */; };
 		01139EE41C6FD800002D50CA /* Mark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01139EDF1C6FD800002D50CA /* Mark.swift */; };
 		01139EE81C6FD88B002D50CA /* uGoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01139EE71C6FD88B002D50CA /* uGoClient.swift */; };
 		01139EEB1C6FD8DA002D50CA /* CommonHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01139EEA1C6FD8DA002D50CA /* CommonHelpers.swift */; };
@@ -17,6 +16,7 @@
 		01139EF51C70916E002D50CA /* uGoConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01139EF41C70916E002D50CA /* uGoConvenience.swift */; };
 		013797AF1C43C67300B36181 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0107715F1B416EFD00D70D85 /* Utils.swift */; };
 		013E77C61C81D2B100C74DC9 /* tapticsCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013E77C51C81D2B100C74DC9 /* tapticsCall.swift */; };
+		01429C6F1CC644650003847F /* AppSpecification.docx in Resources */ = {isa = PBXBuildFile; fileRef = 01429C6E1CC644650003847F /* AppSpecification.docx */; };
 		015829821BDCFF2500C31512 /* HistoryCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015829811BDCFF2500C31512 /* HistoryCellViewController.swift */; };
 		015829841BDD80F300C31512 /* DetailRecordHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015829831BDD80F300C31512 /* DetailRecordHistoryViewController.swift */; };
 		015E19C51C314ACD00749C09 /* 38mm_48_NotifCenter.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E19B91C314ACC00749C09 /* 38mm_48_NotifCenter.png */; };
@@ -67,6 +67,7 @@
 		018D3AFB1BE14C89004AF76C /* AppIcon_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 018D3AF91BE14C89004AF76C /* AppIcon_3x.png */; };
 		01912E221BDAD5F900588B95 /* RecordCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01912E211BDAD5F900588B95 /* RecordCard.swift */; };
 		0198D03D1BAB8B9700835E51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0198D03C1BAB8B9700835E51 /* Main.storyboard */; };
+		019DA54F1CC436A800CB982B /* Readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 019DA54E1CC436A800CB982B /* Readme.md */; };
 		01CC916A1B4AD55700FC5B7A /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CC91691B4AD55700FC5B7A /* Beacon.swift */; };
 		01CEDB741B47253A00775DDD /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CEDB731B47253A00775DDD /* Account.swift */; };
 		01CEDB781B47261B00775DDD /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CEDB771B47261B00775DDD /* Keychain.swift */; };
@@ -141,13 +142,13 @@
 /* Begin PBXFileReference section */
 		0107715F1B416EFD00D70D85 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		01139EDD1C6FD800002D50CA /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		01139EDE1C6FD800002D50CA /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		01139EDF1C6FD800002D50CA /* Mark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mark.swift; sourceTree = "<group>"; };
 		01139EE71C6FD88B002D50CA /* uGoClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = uGoClient.swift; sourceTree = "<group>"; };
 		01139EEA1C6FD8DA002D50CA /* CommonHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonHelpers.swift; sourceTree = "<group>"; };
 		01139EED1C6FD930002D50CA /* uGoConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = uGoConstant.swift; sourceTree = "<group>"; };
 		01139EF41C70916E002D50CA /* uGoConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = uGoConvenience.swift; path = ../uGoConvenience.swift; sourceTree = "<group>"; };
 		013E77C51C81D2B100C74DC9 /* tapticsCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tapticsCall.swift; sourceTree = "<group>"; };
+		01429C6E1CC644650003847F /* AppSpecification.docx */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppSpecification.docx; path = ../../AppSpecification.docx; sourceTree = "<group>"; };
 		015829811BDCFF2500C31512 /* HistoryCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryCellViewController.swift; sourceTree = "<group>"; };
 		015829831BDD80F300C31512 /* DetailRecordHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailRecordHistoryViewController.swift; sourceTree = "<group>"; };
 		015E19B91C314ACC00749C09 /* 38mm_48_NotifCenter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 38mm_48_NotifCenter.png; path = ../testTutti/38mm_48_NotifCenter.png; sourceTree = "<group>"; };
@@ -202,6 +203,7 @@
 		018D3AF91BE14C89004AF76C /* AppIcon_3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon_3x.png; sourceTree = "<group>"; };
 		01912E211BDAD5F900588B95 /* RecordCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordCard.swift; sourceTree = "<group>"; };
 		0198D03C1BAB8B9700835E51 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		019DA54E1CC436A800CB982B /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		01CC91691B4AD55700FC5B7A /* Beacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
 		01CEDB731B47253A00775DDD /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		01CEDB771B47261B00775DDD /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
@@ -260,7 +262,6 @@
 			isa = PBXGroup;
 			children = (
 				01139EDD1C6FD800002D50CA /* CoreDataManager.swift */,
-				01139EDE1C6FD800002D50CA /* Person.swift */,
 				01139EDF1C6FD800002D50CA /* Mark.swift */,
 			);
 			name = Data;
@@ -327,6 +328,8 @@
 				016A881C1B40BDC6005CA489 /* testTutti.xcdatamodeld */,
 				016A88181B40BDC6005CA489 /* Supporting Files */,
 				01CF1C491B47D90C002DC09E /* Localizable.strings */,
+				019DA54E1CC436A800CB982B /* Readme.md */,
+				01429C6E1CC644650003847F /* AppSpecification.docx */,
 			);
 			path = testTutti;
 			sourceTree = "<group>";
@@ -619,6 +622,7 @@
 				018D3ABA1BE0E10B004AF76C /* ugologo3.png in Resources */,
 				015E19CA1C314ACD00749C09 /* 38mm_Out.png in Resources */,
 				018D3AAA1BE0E10B004AF76C /* engage.png in Resources */,
+				01429C6F1CC644650003847F /* AppSpecification.docx in Resources */,
 				018D3AB61BE0E10B004AF76C /* salida.png in Resources */,
 				018D3AB11BE0E10B004AF76C /* llave.png in Resources */,
 				015E19C81C314ACD00749C09 /* 38mm_172_ShortLook.png in Resources */,
@@ -692,7 +696,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				01139EE81C6FD88B002D50CA /* uGoClient.swift in Sources */,
-				01139EE21C6FD800002D50CA /* Person.swift in Sources */,
 				01139EE41C6FD800002D50CA /* Mark.swift in Sources */,
 				01CF1C811B49E0CD002DC09E /* Location.swift in Sources */,
 				01CF04FD1B4D34AB002FBD9D /* HistoryViewController.swift in Sources */,
@@ -705,6 +708,7 @@
 				01CC916A1B4AD55700FC5B7A /* Beacon.swift in Sources */,
 				01CF04FF1B4D34C2002FBD9D /* ConfigurationViewController.swift in Sources */,
 				01CF1C511B4816C4002DC09E /* PersistedSettings.swift in Sources */,
+				019DA54F1CC436A800CB982B /* Readme.md in Sources */,
 				01139EF51C70916E002D50CA /* uGoConvenience.swift in Sources */,
 				015829821BDCFF2500C31512 /* HistoryCellViewController.swift in Sources */,
 				01139EEB1C6FD8DA002D50CA /* CommonHelpers.swift in Sources */,

@@ -24,11 +24,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         uGoClient.sharedInstance().settings.password = passwordTextField.text
         logueate()
     }
+
+    @IBOutlet weak var myActivity: UIActivityIndicatorView!
+    
     @IBAction func unwindToMenu(segue: UIStoryboardSegue) {}
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("on viewDidLoad")
+        myActivity.hidden = true
         userTextField.delegate = self
         passwordTextField.delegate = self
         logueate()
@@ -38,10 +41,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         if let usr = uGoClient.sharedInstance().settings.user {
             if let pwd = uGoClient.sharedInstance().settings.password {
                 if (usr != "" && pwd != "" ){
+                    myActivity.hidden = false
                     userTextField.text = usr
                     passwordTextField.text = pwd
                     print(myUtils.currentTimeMillis())
                     uGoClient.sharedInstance().uGoLogin(){(result, error) -> Void in
+                        self.myActivity.hidden = true
                         if let _ = result as ConnectionResult! {
                             uGoClient.sharedInstance().isConnected = true
                             if (result == ConnectionResult.Success){
@@ -81,6 +86,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true;
     }
+    
     
     
 }

@@ -149,8 +149,10 @@ extension uGoClient {
                 let beep_id: Int! = info["BEEP_ID"] as! Int
                 let xNSNumber = beep_id as NSNumber
                 temp["beep_id"] = xNSNumber.stringValue
-                let myCard : RecordCard = RecordCard(inTipoEvento: temp["tipo_evento"]!, inEsRegistroOffline: "N", inFecServidor: temp["fch_servidor"]!, inValLatitud: temp["val_latitud"]!, inValLongitud: temp["val_longitud"]!, inDispositivo: temp["tipo_dispositivo"]!, inBeepId: temp["beep_id"]!)
-                self.myHistoryRecords.append(myCard)
+                
+                let thisResult = ["rcTipoEvento": temp["tipo_evento"]!, "rcFecServidor": temp["fch_servidor"]!, "rcValLatitud": temp["val_latitud"]!, "rcValLongitud": temp["val_longitud"]!, "rcDispositivo": temp["tipo_dispositivo"]!, "rcBeepId": temp["beep_id"]!]
+                let myMark = Mark(dictionary: thisResult, context: CoreDataManager.sharedInstance().managedObjectContext)
+                self.myHistoryRecords.append(myMark)
             }
             completionHandler(result: complete, error: error)
         })
@@ -198,10 +200,6 @@ extension uGoClient {
         legalURLCharactersToBeEscaped.addCharactersInString(":&=;+!@#()',*")
         let returnStr = string.stringByAddingPercentEncodingWithAllowedCharacters(legalURLCharactersToBeEscaped as! NSCharacterSet)
         return returnStr!
-//        return CFURLCreateStringByAddingPercentEscapes(nil, string, nil, legalURLCharactersToBeEscaped, CFStringBuiltInEncodings.UTF8.rawValue) as String
-/*
-/Users/hroman/Dropbox/desktop/Software/testTutti2/uGoConvenience.swift:198:16: 'CFURLCreateStringByAddingPercentEscapes' was deprecated in iOS 9.0: Use [NSString stringByAddingPercentEncodingWithAllowedCharacters:] instead, which always uses the recommended UTF-8 encoding, and which encodes for a specific URL component or subcomponent (since each URL component or subcomponent has different rules for what characters are valid).
-*/
     }
     
     func queryComponents(key: String, _ value: AnyObject) -> [(String, String)] {

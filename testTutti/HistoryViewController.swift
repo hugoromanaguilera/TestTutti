@@ -9,38 +9,57 @@
 import Foundation
 import UIKit
 import MapKit
+import CoreData
 
 class HistoryViewController: UITableViewController {
     
     //for url only
     var ret : ConnectionResult = .NoCredentials
-    var tableData : [RecordCard] = []
+    var tableData : [Mark] = []
     let historyCellIdentifier = "historyCell"
     
-    @IBOutlet var historyTextView: UITextView!
+    var myMarks: [Mark] = []
+    var sharedContext: NSManagedObjectContext {
+        return CoreDataManager.sharedInstance().managedObjectContext
+    }
+    
+    @IBOutlet var myActivity: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        navigationController?.setNavigationBarHidden(true, animated: false)
         self.configureTableView()
+//MARK: Load data from db
+        print(myUtils.currentTimeMillis())
+        dispatch_async(dispatch_get_main_queue(), {
+            self.tableData = uGoClient.sharedInstance().myHistoryRecords
+            self.tableView.reloadData()
+            print(myUtils.currentTimeMillis())
+        })
+
+        
     }
 
     override func viewDidAppear(animated: Bool) {
 //        navigationController?.setNavigationBarHidden(true, animated: false)
-        let activityView = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
-        activityView.center = self.view.center
-        activityView.startAnimating()
-        self.view.addSubview(activityView)
+        myActivity.hidden = false
+        myActivity.startAnimating()
         print(myUtils.currentTimeMillis())
+
+        for mark in self.myMarks {
+            self.sharedContext.deleteObject(mark)
+        }
+        self.tableData.removeAll()
+        CoreDataManager.sharedInstance().saveContext()
         
         uGoClient.sharedInstance().uGOHistoryRecord() {(result, error) -> Void in
+            self.myActivity.hidden = true
+            self.myActivity.stopAnimating()
             if let _ = result as ConnectionResult! {
                 uGoClient.sharedInstance().isConnected = true
                 if (result == ConnectionResult.Success){
-                    dispatch_async(dispatch_get_main_queue(), {
+                    dispatch_async(dispatch_get_main_queue(), {                        
                         self.tableData = uGoClient.sharedInstance().myHistoryRecords
                         self.tableView.reloadData()
-                        activityView.stopAnimating()
                         print(myUtils.currentTimeMillis())
                     })
                 }
@@ -70,7 +89,7 @@ class HistoryViewController: UITableViewController {
     
     func historyCellAtIndexPath(indexPath:NSIndexPath) -> HistoryCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(historyCellIdentifier) as! HistoryCell
-        let record = tableData[indexPath.row] as RecordCard
+        let record = tableData[indexPath.row] as Mark
         cell.titleLabel.text = record.rcTipoEvento ?? "[No event]"
         cell.subtitleLabel.text = record.rcFecServidor ?? record.rcDispositivo
         if record.rcTipoEvento == "Entrada"{
@@ -104,7 +123,7 @@ class HistoryViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 
         let indexPath = self.tableView.indexPathForSelectedRow!
-        let record = tableData[indexPath.row] as RecordCard
+        let record = tableData[indexPath.row] as Mark
         if record.rcValLatitud == "" || record.rcValLongitud == "" {
             return
         }
@@ -122,5 +141,4 @@ class HistoryViewController: UITableViewController {
     }
 
 }
-
 
