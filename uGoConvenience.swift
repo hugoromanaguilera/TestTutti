@@ -150,9 +150,8 @@ extension uGoClient {
                 let xNSNumber = beep_id as NSNumber
                 temp["beep_id"] = xNSNumber.stringValue
                 
-                let thisResult = ["rcTipoEvento": temp["tipo_evento"]!, "rcFecServidor": temp["fch_servidor"]!, "rcValLatitud": temp["val_latitud"]!, "rcValLongitud": temp["val_longitud"]!, "rcDispositivo": temp["tipo_dispositivo"]!, "rcBeepId": temp["beep_id"]!]
-                let myMark = Mark(dictionary: thisResult, context: CoreDataManager.sharedInstance().managedObjectContext)
-                self.myHistoryRecords.append(myMark)
+                let thisResult : RecordCard = RecordCard(inTipoEvento: temp["tipo_evento"]!, inFecServidor: temp["fch_servidor"]!, inValLatitud: temp["val_latitud"]!, inValLongitud: temp["val_longitud"]!, inDispositivo: temp["tipo_dispositivo"]!, inBeepId: temp["beep_id"]!)
+                self.myHistoryRecords.append(thisResult)
             }
             completionHandler(result: complete, error: error)
         })

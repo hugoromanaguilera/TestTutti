@@ -42,7 +42,7 @@ class CoreDataManager {
         
         print("Instantiating the managedObjectModel property")
         
-        let modelURL = NSBundle.mainBundle().URLForResource("uGo", withExtension: "momd")!
+        let modelURL = NSBundle.mainBundle().URLForResource("testTutti", withExtension: "momd")!
         return NSManagedObjectModel(contentsOfURL: modelURL)!
     }()
     

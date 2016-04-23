@@ -15,7 +15,7 @@ class HistoryViewController: UITableViewController {
     
     //for url only
     var ret : ConnectionResult = .NoCredentials
-    var tableData : [Mark] = []
+    var tableData : [RecordCard] = []
     let historyCellIdentifier = "historyCell"
     
     var myMarks: [Mark] = []
@@ -30,13 +30,8 @@ class HistoryViewController: UITableViewController {
         self.configureTableView()
 //MARK: Load data from db
         print(myUtils.currentTimeMillis())
-        dispatch_async(dispatch_get_main_queue(), {
-            self.tableData = uGoClient.sharedInstance().myHistoryRecords
-            self.tableView.reloadData()
-            print(myUtils.currentTimeMillis())
-        })
-
-        
+        myMarks = getAllMarks()!
+        print(myUtils.currentTimeMillis())
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -44,13 +39,6 @@ class HistoryViewController: UITableViewController {
         myActivity.hidden = false
         myActivity.startAnimating()
         print(myUtils.currentTimeMillis())
-
-        for mark in self.myMarks {
-            self.sharedContext.deleteObject(mark)
-        }
-        self.tableData.removeAll()
-        CoreDataManager.sharedInstance().saveContext()
-        
         uGoClient.sharedInstance().uGOHistoryRecord() {(result, error) -> Void in
             self.myActivity.hidden = true
             self.myActivity.stopAnimating()
@@ -58,6 +46,9 @@ class HistoryViewController: UITableViewController {
                 uGoClient.sharedInstance().isConnected = true
                 if (result == ConnectionResult.Success){
                     dispatch_async(dispatch_get_main_queue(), {                        
+                        if uGoClient.sharedInstance().myHistoryRecords.count > 0 {
+                            self.refreshAllMarks(uGoClient.sharedInstance().myHistoryRecords)
+                        }
                         self.tableData = uGoClient.sharedInstance().myHistoryRecords
                         self.tableView.reloadData()
                         print(myUtils.currentTimeMillis())
@@ -83,13 +74,40 @@ class HistoryViewController: UITableViewController {
         //
     }
 
+    func refreshAllMarks(inRecordCardSet:[RecordCard])->Void{
+         for mark in self.myMarks {
+            self.sharedContext.deleteObject(mark)
+         }
+         CoreDataManager.sharedInstance().saveContext()
+        for anyIn in inRecordCardSet {
+            let anyOut : Mark = Mark(dictionary: ["rcDispositivo":anyIn.rcDispositivo,"rcFecServidor":anyIn.rcFecServidor,"rcTipoEvento":anyIn.rcTipoEvento,"rcValLatitud":anyIn.rcValLatitud,"rcValLongitud":anyIn.rcValLongitud,"rcBeepId":anyIn.rcBeepId],context: sharedContext)
+            CoreDataManager.sharedInstance().saveContext()
+        }
+    }
+
+    func getAllMarks() -> [Mark]? {
+        
+        let fetchRequest = NSFetchRequest(entityName: "Mark")
+        do {
+            let results = try sharedContext.executeFetchRequest(fetchRequest) as! [Mark]
+            return results
+        } catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
+            return nil
+        } catch {
+            print("Could not fetch by other issue")
+            return nil
+        }
+    }
+    
+//MARK Table sub routines
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         return historyCellAtIndexPath(indexPath)
     }
     
     func historyCellAtIndexPath(indexPath:NSIndexPath) -> HistoryCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(historyCellIdentifier) as! HistoryCell
-        let record = tableData[indexPath.row] as Mark
+        let record = tableData[indexPath.row] as RecordCard
         cell.titleLabel.text = record.rcTipoEvento ?? "[No event]"
         cell.subtitleLabel.text = record.rcFecServidor ?? record.rcDispositivo
         if record.rcTipoEvento == "Entrada"{
@@ -123,7 +141,7 @@ class HistoryViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 
         let indexPath = self.tableView.indexPathForSelectedRow!
-        let record = tableData[indexPath.row] as Mark
+        let record = tableData[indexPath.row] as RecordCard
         if record.rcValLatitud == "" || record.rcValLongitud == "" {
             return
         }

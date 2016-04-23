@@ -23,7 +23,7 @@ class DetailRecordHistoryViewController: UIViewController {
     @IBOutlet weak var myActivity: UIActivityIndicatorView!
     
     var initialLocation = CLLocation()
-    var myRecord : Mark!
+    var myRecord : RecordCard!
     var session: NSURLSession!
     var appDelegate: AppDelegate!
     

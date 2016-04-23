@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Automatic">
     <entity name="Mark" syncable="YES">
+        <attribute name="rcBeepId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="rcDispositivo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="rcFecServidor" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="rcTipoEvento" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="rcValLatitud" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="rcValLongitud" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="rcValLatitud" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rcValLongitud" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Mark" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="Mark" positionX="-63" positionY="-18" width="128" height="135"/>
     </elements>
 </model>

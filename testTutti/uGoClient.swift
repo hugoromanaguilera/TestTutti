@@ -18,7 +18,7 @@ class uGoClient: NSObject, NSURLSessionDelegate {
     var userID : Int? = nil
     var isConnected = false
     var settings : PersistedSettings! = PersistedSettings()
-    var myHistoryRecords: [Mark] = []
+    var myHistoryRecords: [RecordCard] = []
     var myLocation : Location!
 
     //MARK: Xml parsing

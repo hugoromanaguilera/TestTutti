@@ -9,16 +9,14 @@ import Foundation
 
 class RecordCard {
     var rcTipoEvento = ""
-    var rcEsRegistroOffline = ""
     var rcFecServidor = ""
     var rcValLatitud = ""
     var rcValLongitud = ""
     var rcDispositivo = ""
     var rcBeepId = ""
     
-    init(inTipoEvento: String, inEsRegistroOffline: String, inFecServidor: String, inValLatitud: String, inValLongitud: String, inDispositivo: String, inBeepId: String ){
+    init(inTipoEvento: String, inFecServidor: String, inValLatitud: String, inValLongitud: String, inDispositivo: String, inBeepId: String ){
         rcTipoEvento = inTipoEvento
-        rcEsRegistroOffline = inEsRegistroOffline
         rcFecServidor = inFecServidor
         rcValLatitud = inValLatitud
         rcValLongitud = inValLongitud
