@@ -1,6 +1,10 @@
 
 App Specification: uGo!
 iOS Developer Nanodegree
+for testing purposes:
+user: udacity
+password: Lima.2016
+
 
 uGo! allows users to record when and where they arrive and leave the office. A history of these arrival and departures is stored, along with location data. Users can also view their history using the app. 
 
